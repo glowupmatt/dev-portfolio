@@ -19,19 +19,22 @@ const TechStack = () => {
           <h2 className="w-full text-start font-bold text-[1.5rem] z-10">
             My Technology Stack
           </h2>
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid grid-cols-3 gap-4 ">
             {techStackInfo.map((data, index) => {
               return (
-                <div key={data.title} className="relative">
+                <div
+                  key={data.title}
+                  className="relative even:bg-gray-500 odd:bg-white rounded-full drop-shadow-[4rem] flex flex-col justify-center items-center gap-[5px] "
+                >
                   <div
                     className={classNames(
-                      "h-[5rem] w-[5rem] bg-gray-200 rounded-full drop-shadow-[4rem] flex flex-col justify-center items-center gap-[5px]"
+                      "h-[5rem] w-[5rem]  flex flex-col justify-center items-center "
                     )}
                   >
                     <div className="relative w-[30px] h-[30px] md:w-[50px] md:h-[50px]">
                       <Image alt="" src={data.image} fill quality={100} />
                     </div>
-                    <p className="text-black text-[9px]">{data.title}</p>
+                    <p className="text-[9px] text-black">{data.title}</p>
                   </div>
                 </div>
               );
