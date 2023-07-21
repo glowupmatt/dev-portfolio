@@ -4,10 +4,19 @@ import { techStackInfo } from "@/dataFolder/techStack";
 import classNames from "classnames";
 const TechStack = () => {
   return (
-    <div id="tech" className="h-[25rem] w-full">
+    <div id="tech" className="h-[25rem] relative w-full overflow-hidden">
+      <div className="absolute w-[27rem] h-[15rem] right-[-14rem] top-[5rem] animate-spin-slow blur-[31px]">
+        <Image
+          alt=""
+          src="/gradient-designs/shape-1.svg"
+          fill
+          quality={100}
+          className="object-cover"
+        />
+      </div>
       <div className="h-full flex flex-col justify-center items-center rounded-t-[10rem]">
         <div className="text-white flex flex-col justify-center items-center gap-[2rem] absolute w-full p-[2rem]">
-          <h2 className="w-full text-start font-bold text-[1.5rem]">
+          <h2 className="w-full text-start font-bold text-[1.5rem] z-10">
             My Technology Stack
           </h2>
           <div className="grid grid-cols-3 gap-4">

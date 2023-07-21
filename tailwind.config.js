@@ -16,6 +16,9 @@ module.exports = {
       "2xl": "1536px",
     },
     extend: {
+      animation: {
+        "spin-slow": "spin 15s linear infinite",
+      },
       fontFamily: {
         serif: ["Satoshi", "General Sans"],
       },

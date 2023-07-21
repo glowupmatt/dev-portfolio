@@ -9,6 +9,7 @@ const Menu = () => {
         <h2>Matthew</h2>
         <h2>Nicholson</h2>
       </div>
+
       <section className="p-[1rem] lg:grid lg:grid-cols-2">
         <Link
           href="#projects"
@@ -31,18 +32,36 @@ const Menu = () => {
         <div className="flex w-full gap-[1rem] p-4 lg:grid lg:grid-rows-2">
           <Link
             href="#tech"
-            className=" bg-white rounded-full w-full p-[.5rem] flex flex-col justify-center items-center gap-[.5rem] h-[20vh] lg:col-span-2"
+            className="relative  rounded-full w-full p-[.5rem] flex flex-col justify-center items-center gap-[.5rem] h-[20vh] lg:col-span-2"
           >
+            <div className="absolute w-full h-full ">
+              <Image
+                alt=""
+                src="/gradient-designs/gradient-5.svg"
+                fill
+                quality={100}
+                className="object-cover rounded-full "
+              />
+            </div>
             <div className="relative w-[20px] h-[20px] md:h-[35px] md:w-[35px] ">
               <Image alt="" src="/icons/tech-stack.svg" fill quality={100} />
             </div>
-            <p className="md:text-[1rem]">Tech</p>
+            <p className="md:text-[1rem] z-10 text-white">Tech</p>
           </Link>
-          <div className="bg-purple-500 text-white rounded-full w-full p-[.5rem] flex flex-col justify-center items-center gap-[.5rem] h-[20vh] lg:row-span-2 col-span-2">
+          <div className="relative  text-white rounded-full w-full p-[.5rem] flex flex-col justify-center items-center gap-[.5rem] h-[20vh] lg:row-span-2 col-span-2">
+            <div className="absolute w-full h-full ">
+              <Image
+                alt=""
+                src="/gradient-designs/gradient-one.svg"
+                fill
+                quality={100}
+                className="object-cover rounded-full "
+              />
+            </div>
             <div className="relative w-[20px] h-[20px] md:h-[35px] md:w-[35px]">
               <Image alt="" src="/icons/contact.svg" fill quality={100} />
             </div>
-            <p className="md:text-[1rem]">Contact</p>
+            <p className="md:text-[1rem] z-10">Contact</p>
           </div>
         </div>
       </section>

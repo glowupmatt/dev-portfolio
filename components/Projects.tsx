@@ -6,11 +6,29 @@ import Link from "next/link";
 
 const Projects = () => {
   return (
-    <div className="flex justify-center items-center">
-      <div className="p-[2rem] w-full rounded-t-[4.5rem] backdrop-blur-sm ">
+    <div className="flex justify-center items-center overflow-hidden">
+      <div className="relative p-[2rem] w-full ">
         <h2 className="text-white my-4 text-right text-[1.5rem] font-bold mb-[6rem]">
           Projects
         </h2>
+        <div className="absolute w-[27rem] h-[27rem] right-0 top-[14rem] animate-spin-slow blur-[31px]">
+          <Image
+            alt=""
+            src="/gradient-designs/shape-1.svg"
+            fill
+            quality={100}
+            className="object-cover"
+          />
+        </div>
+        <div className="absolute w-[27rem] h-[27rem] right-0 top-[36rem] animate-spin-slow blur-[31px]">
+          <Image
+            alt=""
+            src="/gradient-designs/shape-1.svg"
+            fill
+            quality={100}
+            className="object-cover"
+          />
+        </div>
         <div className="flex flex-col gap-[7rem]">
           {projectData.map((data, index) => {
             return (
