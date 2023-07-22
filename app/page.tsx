@@ -5,7 +5,7 @@ import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
 export default function Home() {
   return (
-    <div className="flex flex-col gap-[5rem]">
+    <div className="flex flex-col gap-[4rem] md:gap-[6rem]">
       <Menu />
       <TechStack />
       <Projects />

@@ -7,8 +7,8 @@ import Link from "next/link";
 const Projects = () => {
   return (
     <div className="flex justify-center items-center overflow-hidden">
-      <div className="relative p-[2rem] w-full ">
-        <h2 className="text-white my-4 text-right text-[1.5rem] font-bold mb-[6rem] md:text-[3rem]">
+      <div className="relative px-[2rem] w-full ">
+        <h2 className="text-white text-right text-[1.5rem] font-bold mb-[6rem] md:text-[3rem]">
           Projects
         </h2>
         <div className="absolute w-[27rem] h-[27rem] right-0 top-[14rem] animate-spin-slow blur-[31px] md:top-[7rem] md:w-full md:right-[10rem]">
@@ -16,7 +16,6 @@ const Projects = () => {
             alt=""
             src="/gradient-designs/shape-1.svg"
             fill
-            quality={100}
             className="object-cover"
           />
         </div>
@@ -25,7 +24,6 @@ const Projects = () => {
             alt=""
             src="/gradient-designs/shape-1.svg"
             fill
-            quality={100}
             className="object-cover"
           />
         </div>
@@ -54,7 +52,6 @@ const Projects = () => {
                     alt=""
                     src={data.images.desktopView}
                     fill
-                    quality={100}
                     className="object-contain"
                   />
                 </Link>
@@ -71,7 +68,6 @@ const Projects = () => {
                         alt=""
                         src="/github-mark.svg"
                         fill
-                        quality={100}
                         className="object-contain"
                       />
                     </Link>
@@ -85,7 +81,6 @@ const Projects = () => {
                         alt=""
                         src="/link-solid.svg"
                         fill
-                        quality={100}
                         className="object-contain"
                       />
                     </Link>

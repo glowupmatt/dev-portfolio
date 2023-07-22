@@ -78,19 +78,13 @@ const Contact = () => {
         />
         <button className="relative w-full flex-col flex justify-center items-center gap-1 p-[2rem] rounded-full border-black border-[2px] drop-shadow-lg">
           <div className="relative w-[20px] h-[20px] md:w-[50px] md:h-[50px] z-10">
-            <Image
-              alt=""
-              src="/icons/paper-plane-regular.svg"
-              fill
-              quality={100}
-            />
+            <Image alt="" src="/icons/paper-plane-regular.svg" fill />
           </div>
           <div className="absolute w-full h-full ">
             <Image
               alt=""
               src="/gradient-designs/gradient-5.svg"
               fill
-              quality={100}
               className="object-cover rounded-full "
             />
           </div>
