@@ -48,7 +48,10 @@ const Menu = () => {
             </div>
             <p className="md:text-[1rem] z-10 text-white">Tech</p>
           </Link>
-          <div className="relative  text-white rounded-full w-full p-[.5rem] flex flex-col justify-center items-center gap-[.5rem] h-[9rem] lg:row-span-2 col-span-2">
+          <Link
+            href="#contact"
+            className="relative  text-white rounded-full w-full p-[.5rem] flex flex-col justify-center items-center gap-[.5rem] h-[9rem] lg:row-span-2 col-span-2"
+          >
             <div className="absolute w-full h-full ">
               <Image
                 alt=""
@@ -62,7 +65,7 @@ const Menu = () => {
               <Image alt="" src="/icons/contact.svg" fill quality={100} />
             </div>
             <p className="md:text-[1rem] z-10">Contact</p>
-          </div>
+          </Link>
         </div>
       </section>
     </div>

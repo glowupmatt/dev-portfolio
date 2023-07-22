@@ -54,7 +54,10 @@ const Contact = () => {
   console.log(formInput);
 
   return (
-    <section className="flex justify-center items-center p-4">
+    <section
+      id="contact"
+      className="flex justify-center items-center p-4 md:p-[3rem]"
+    >
       <form className="flex flex-col justify-center items-center w-full gap-[1rem]">
         {inputForm.map((input, index) => {
           return (
@@ -73,8 +76,8 @@ const Contact = () => {
           value={textArea}
           onChange={textAreaHandler}
         />
-        <button className="relative w-full flex flex-col justify-center items-center gap-3 p-[2rem] rounded-full border-black border-[2px]">
-          <div className="relative w-[30px] h-[30px] md:w-[50px] md:h-[50px] z-10">
+        <button className="relative w-full flex-col flex justify-center items-center gap-1 p-[2rem] rounded-full border-black border-[2px] drop-shadow-lg">
+          <div className="relative w-[20px] h-[20px] md:w-[50px] md:h-[50px] z-10">
             <Image
               alt=""
               src="/icons/paper-plane-regular.svg"

@@ -8,10 +8,10 @@ const Projects = () => {
   return (
     <div className="flex justify-center items-center overflow-hidden">
       <div className="relative p-[2rem] w-full ">
-        <h2 className="text-white my-4 text-right text-[1.5rem] font-bold mb-[6rem]">
+        <h2 className="text-white my-4 text-right text-[1.5rem] font-bold mb-[6rem] md:text-[3rem]">
           Projects
         </h2>
-        <div className="absolute w-[27rem] h-[27rem] right-0 top-[14rem] animate-spin-slow blur-[31px]">
+        <div className="absolute w-[27rem] h-[27rem] right-0 top-[14rem] animate-spin-slow blur-[31px] md:top-[7rem] md:w-full md:right-[10rem]">
           <Image
             alt=""
             src="/gradient-designs/shape-1.svg"
@@ -20,7 +20,7 @@ const Projects = () => {
             className="object-cover"
           />
         </div>
-        <div className="absolute w-[27rem] h-[27rem] right-0 top-[36rem] animate-spin-slow blur-[31px]">
+        <div className="absolute w-[27rem] h-[27rem] right-0 top-[36rem] animate-spin-slow blur-[31px] md:top-[23rem] md:right-[-13rem]">
           <Image
             alt=""
             src="/gradient-designs/shape-1.svg"
@@ -29,14 +29,14 @@ const Projects = () => {
             className="object-cover"
           />
         </div>
-        <div className="flex flex-col gap-[7rem]">
+        <div className="flex flex-col gap-[7rem] md:grid md:grid-cols-2 md:gap-[1rem]">
           {projectData.map((data, index) => {
             return (
               <div
                 id="projects"
                 key={data.title}
                 className={classNames(
-                  "relative md:w-[50px] md:h-[50px] flex flex-col justify-end items-center pt-[2rem] px-[2rem] pb-[1rem] rounded-md w-full h-[15rem] backdrop-blur-sm drop-shadow-xl text-black",
+                  "relative flex flex-col justify-end items-center pt-[2rem] px-[2rem] pb-[1rem] rounded-md w-full h-[15rem] backdrop-blur-sm drop-shadow-xl text-black md:w-[21rem] md:h-[13rem] md:mb-[4rem]",
                   { "bg-[rgb(208,208,208)]": index === 0 },
                   {
                     "bg-white": index === 1,

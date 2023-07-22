@@ -4,8 +4,11 @@ import { techStackInfo } from "@/dataFolder/techStack";
 import classNames from "classnames";
 const TechStack = () => {
   return (
-    <div id="tech" className="h-[25rem] relative w-full overflow-hidden">
-      <div className="absolute w-[27rem] h-[15rem] right-[-14rem] top-[5rem] animate-spin-slow blur-[31px]">
+    <div
+      id="tech"
+      className="h-[30rem] relative w-full overflow-hidden p-4 md:h-[33rem]"
+    >
+      <div className="absolute w-[27rem] h-[15rem] right-[-14rem] top-[5rem] animate-spin-slow blur-[31px] md:w-[38rem] md:h-[32rem] md:right-[-13rem] md:top-[1rem]">
         <Image
           alt=""
           src="/gradient-designs/shape-1.svg"
@@ -14,32 +17,30 @@ const TechStack = () => {
           className="object-cover"
         />
       </div>
-      <div className="h-full flex flex-col justify-center items-center rounded-t-[10rem]">
-        <div className="text-white flex flex-col justify-center items-center gap-[2rem] absolute w-full p-[2rem]">
-          <h2 className="w-full text-start font-bold text-[1.5rem] z-10">
-            My Technology Stack
-          </h2>
-          <div className="grid grid-cols-3 gap-4 ">
-            {techStackInfo.map((data, index) => {
-              return (
+      <div className="h-full flex flex-col justify-center items-center rounded-t-[10rem] p-[2rem]">
+        <h2 className="w-full text-start font-bold text-[1.5rem] z-10 text-white mb-[2rem] md:text-[2rem]">
+          My Technology Stack
+        </h2>
+        <div className="grid grid-cols-3 grid-rows-3 gap-[3rem] h-full w-full justify-items-center md:gap-[2rem]">
+          {techStackInfo.map((data, index) => {
+            return (
+              <div
+                key={data.title}
+                className="relative even:bg-gray-500 odd:bg-white rounded-full drop-shadow-[4rem] flex flex-col justify-center items-center gap-[5px] h-[5rem] w-[5rem] md:h-[8rem] md:w-[8rem]"
+              >
                 <div
-                  key={data.title}
-                  className="relative even:bg-gray-500 odd:bg-white rounded-full drop-shadow-[4rem] flex flex-col justify-center items-center gap-[5px] "
+                  className={classNames(
+                    "flex flex-col justify-center items-center"
+                  )}
                 >
-                  <div
-                    className={classNames(
-                      "h-[5rem] w-[5rem]  flex flex-col justify-center items-center "
-                    )}
-                  >
-                    <div className="relative w-[30px] h-[30px] md:w-[50px] md:h-[50px]">
-                      <Image alt="" src={data.image} fill quality={100} />
-                    </div>
-                    <p className="text-[9px] text-black">{data.title}</p>
+                  <div className="relative w-[30px] h-[30px] md:w-[50px] md:h-[50px]">
+                    <Image alt="" src={data.image} fill quality={100} />
                   </div>
+                  <p className="text-[9px] text-black">{data.title}</p>
                 </div>
-              );
-            })}
-          </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>
