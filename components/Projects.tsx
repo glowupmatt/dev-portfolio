@@ -6,7 +6,10 @@ import Link from "next/link";
 
 const Projects = () => {
   return (
-    <div className="flex justify-center items-center overflow-hidden lg:h-[90rem] lg:items-start">
+    <div
+      id="projects"
+      className="flex justify-center items-center overflow-hidden lg:h-[90rem] lg:items-start"
+    >
       <div className="relative px-[2rem] w-full lg:full">
         <h2 className="text-white text-right text-[1.5rem] font-bold mb-[6rem] md:text-[3rem] lg:font-bold lg:text-[4rem] lg:mb-[10rem]">
           Projects
@@ -31,7 +34,6 @@ const Projects = () => {
           {projectData.map((data, index) => {
             return (
               <div
-                id="projects"
                 key={data.title}
                 className={classNames(
                   "relative flex flex-col justify-end items-center pt-[2rem] px-[2rem] pb-[1rem] rounded-md w-full h-[15rem] backdrop-blur-sm drop-shadow-xl text-black md:w-[21rem] md:h-[13rem] md:mb-[4rem] lg:h-[30rem] lg:w-[35rem] lg:mb-[6rem]",
