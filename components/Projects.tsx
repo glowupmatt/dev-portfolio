@@ -36,7 +36,7 @@ const Projects = () => {
               <div
                 key={data.title}
                 className={classNames(
-                  "relative flex flex-col justify-end items-center pt-[2rem] px-[2rem] pb-[1rem] rounded-md w-full h-[15rem] backdrop-blur-sm drop-shadow-xl text-black md:w-[21rem] md:h-[13rem] md:mb-[4rem] lg:h-[30rem] lg:w-[35rem] lg:mb-[6rem]",
+                  "relative flex flex-col justify-end items-center pt-[2rem] px-[2rem] pb-[1rem] rounded-md w-full h-[15rem] backdrop-blur-sm drop-shadow-xl text-black md:w-[21rem] md:h-[13rem] md:mb-[4rem] lg:h-[23rem] lg:w-[27rem] lg:mb-[6rem]",
                   { "bg-[rgb(208,208,208)]": index === 0 },
                   {
                     "bg-white": index === 1,
@@ -48,7 +48,7 @@ const Projects = () => {
                   href={data.projectUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="absolute w-[90%] h-full drop-shadow-2xl top-[-5rem] lg:h-[57%] transition lg:top-[6rem] lg:ease-in-out lg:delay-150  lg:hover:-translate-y-[8rem] lg:hover:scale-100  lg:duration-300 lg:z-10"
+                  className="absolute w-[90%] h-full drop-shadow-2xl top-[-5rem] lg:h-[57%] transition lg:top-[2rem] lg:ease-in-out lg:delay-150  lg:hover:-translate-y-[8rem] lg:hover:scale-100  lg:duration-300 lg:z-10"
                 >
                   <Image
                     alt=""

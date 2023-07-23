@@ -9,7 +9,9 @@ export default function Home() {
       <Menu />
       <TechStack />
       <Projects />
-      <Contact />
+      <div className="flex justify-center items-center">
+        <Contact />
+      </div>
     </div>
   );
 }

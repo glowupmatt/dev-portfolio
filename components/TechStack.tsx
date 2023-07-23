@@ -1,10 +1,9 @@
 "use client";
 
-import { RefObject, useRef } from "react";
-import { motion, useInView } from "framer-motion";
 import Image from "next/image";
 import { techStackInfo } from "@/dataFolder/techStack";
-import classNames from "classnames";
+import TechStackDesktop from "./TechStackDesktop";
+import TechStackMobile from "./TechStackMobile";
 
 const TechStack = () => {
   return (
@@ -24,32 +23,11 @@ const TechStack = () => {
         <h2 className="w-full text-start font-bold text-[1.5rem] z-10 text-white mb-[2rem] md:text-[2rem] lg:text-[4rem]">
           My Technology Stack
         </h2>
-        <div className="grid grid-cols-3 grid-rows-3 gap-[3rem] h-full w-full justify-items-center md:gap-[2rem] lg:grid-cols-2 lg:auto-rows-fr lg:p-[4rem]">
-          {techStackInfo.map((data, index) => {
-            const isEven = index % 2 === 0;
-            return (
-              <motion.div
-                initial={{ x: isEven ? 300 : -300 }}
-                whileInView={{ x: 0, transition: { duration: 0.5 } }}
-                exit={{ x: isEven ? -300 : 300 }}
-                key={data.title}
-                className="relative even:bg-gray-500 odd:bg-white rounded-full drop-shadow-[4rem] flex flex-col justify-center items-center gap-[5px] h-[5rem] w-[5rem] md:h-[8rem] md:w-[8rem] lg:w-full lg:h-[15rem]"
-              >
-                <div
-                  className={classNames(
-                    "flex flex-col justify-center items-center lg:h-full"
-                  )}
-                >
-                  <div className="relative w-[30px] h-[30px] md:w-[50px] md:h-[50px] lg:h-[8rem] lg:w-[7rem]">
-                    <Image alt="" src={data.image} fill />
-                  </div>
-                  <p className="text-[9px] text-black lg:text-[2rem]">
-                    {data.title}
-                  </p>
-                </div>
-              </motion.div>
-            );
-          })}
+        <div className="hidden lg:block w-full">
+          <TechStackDesktop techStackInfo={techStackInfo} />
+        </div>
+        <div className="lg:hidden block">
+          <TechStackMobile techStackInfo={techStackInfo} />
         </div>
       </div>
     </div>
