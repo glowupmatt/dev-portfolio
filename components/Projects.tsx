@@ -6,12 +6,12 @@ import Link from "next/link";
 
 const Projects = () => {
   return (
-    <div className="flex justify-center items-center overflow-hidden">
-      <div className="relative px-[2rem] w-full ">
-        <h2 className="text-white text-right text-[1.5rem] font-bold mb-[6rem] md:text-[3rem]">
+    <div className="flex justify-center items-center overflow-hidden lg:h-[90rem] lg:items-start">
+      <div className="relative px-[2rem] w-full lg:full">
+        <h2 className="text-white text-right text-[1.5rem] font-bold mb-[6rem] md:text-[3rem] lg:font-bold lg:text-[4rem] lg:mb-[10rem]">
           Projects
         </h2>
-        <div className="absolute w-[27rem] h-[27rem] right-0 top-[14rem] animate-spin-slow blur-[31px] md:top-[7rem] md:w-full md:right-[10rem]">
+        <div className="absolute w-[27rem] h-[27rem] right-0 top-[14rem] animate-spin-slow blur-[31px] md:top-[7rem] md:w-full md:right-[10rem] lg:h-full lg:top-[-1rem] lg:right-[41rem]">
           <Image
             alt=""
             src="/gradient-designs/shape-1.svg"
@@ -19,7 +19,7 @@ const Projects = () => {
             className="object-cover"
           />
         </div>
-        <div className="absolute w-[27rem] h-[27rem] right-0 top-[36rem] animate-spin-slow blur-[31px] md:top-[23rem] md:right-[-13rem]">
+        <div className="absolute w-[27rem] h-[27rem] right-0 top-[36rem] animate-spin-slow blur-[31px] md:top-[23rem] md:right-[-13rem] lg:w-[50rem] lg:h-[50rem] lg:top-[18rem]">
           <Image
             alt=""
             src="/gradient-designs/shape-1.svg"
@@ -27,14 +27,14 @@ const Projects = () => {
             className="object-cover"
           />
         </div>
-        <div className="flex flex-col gap-[7rem] md:grid md:grid-cols-2 md:gap-[1rem]">
+        <div className="flex flex-col gap-[7rem] md:grid md:grid-cols-2 md:gap-[1rem] lg:justify-items-center lg:h-1/2">
           {projectData.map((data, index) => {
             return (
               <div
                 id="projects"
                 key={data.title}
                 className={classNames(
-                  "relative flex flex-col justify-end items-center pt-[2rem] px-[2rem] pb-[1rem] rounded-md w-full h-[15rem] backdrop-blur-sm drop-shadow-xl text-black md:w-[21rem] md:h-[13rem] md:mb-[4rem]",
+                  "relative flex flex-col justify-end items-center pt-[2rem] px-[2rem] pb-[1rem] rounded-md w-full h-[15rem] backdrop-blur-sm drop-shadow-xl text-black md:w-[21rem] md:h-[13rem] md:mb-[4rem] lg:h-[30rem] lg:w-[35rem] lg:mb-[6rem]",
                   { "bg-[rgb(208,208,208)]": index === 0 },
                   {
                     "bg-white": index === 1,
@@ -46,7 +46,7 @@ const Projects = () => {
                   href={data.projectUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="absolute w-[90%] h-full drop-shadow-2xl top-[-5rem]"
+                  className="absolute w-[90%] h-full drop-shadow-2xl top-[-5rem] lg:h-[57%] transition lg:top-[6rem] lg:ease-in-out lg:delay-150  lg:hover:-translate-y-[8rem] lg:hover:scale-100  lg:duration-300 lg:z-10"
                 >
                   <Image
                     alt=""
@@ -56,6 +56,7 @@ const Projects = () => {
                   />
                 </Link>
                 <div className="flex flex-col gap-2 justify-center items-center drop-shadow-2xl">
+                  <p className="hidden lg:block mb-[2rem]">{data.desc}</p>
                   <h2 className="text-[1.5rem] font-bold">{data.title}</h2>
                   <div className="flex gap-3">
                     <Link

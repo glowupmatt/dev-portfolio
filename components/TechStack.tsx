@@ -1,7 +1,10 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import { techStackInfo } from "@/dataFolder/techStack";
 import classNames from "classnames";
+import { motion, Variants } from "framer-motion";
 const TechStack = () => {
   return (
     <div
@@ -17,15 +20,15 @@ const TechStack = () => {
         />
       </div>
       <div className="h-full flex flex-col justify-center items-center rounded-t-[10rem] p-[2rem]">
-        <h2 className="w-full text-start font-bold text-[1.5rem] z-10 text-white mb-[2rem] md:text-[2rem]">
+        <h2 className="w-full text-start font-bold text-[1.5rem] z-10 text-white mb-[2rem] md:text-[2rem] lg:text-[4rem]">
           My Technology Stack
         </h2>
-        <div className="grid grid-cols-3 grid-rows-3 gap-[3rem] h-full w-full justify-items-center md:gap-[2rem] lg:grid-cols-2 lg:auto-rows-fr">
+        <div className="grid grid-cols-3 grid-rows-3 gap-[3rem] h-full w-full justify-items-center md:gap-[2rem] lg:grid-cols-2 lg:auto-rows-fr lg:p-[4rem]">
           {techStackInfo.map((data, index) => {
             return (
-              <div
+              <motion.div
                 key={data.title}
-                className="relative even:bg-gray-500 odd:bg-white rounded-full drop-shadow-[4rem] flex flex-col justify-center items-center gap-[5px] h-[5rem] w-[5rem] md:h-[8rem] md:w-[8rem] lg:w-full lg:h-[14rem]"
+                className="relative even:bg-gray-500 odd:bg-white rounded-full drop-shadow-[4rem] flex flex-col justify-center items-center gap-[5px] h-[5rem] w-[5rem] md:h-[8rem] md:w-[8rem] lg:w-full lg:h-[10rem]"
               >
                 <div
                   className={classNames(
@@ -37,7 +40,7 @@ const TechStack = () => {
                   </div>
                   <p className="text-[9px] text-black">{data.title}</p>
                 </div>
-              </div>
+              </motion.div>
             );
           })}
         </div>
