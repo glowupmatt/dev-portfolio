@@ -2,6 +2,7 @@
 import { ChangeEvent, useState } from "react";
 import Input from "./Input";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export type formInputObj = {
   name: string;
@@ -54,11 +55,14 @@ const Contact = () => {
   console.log(formInput);
 
   return (
-    <section
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1, transition: { duration: 0.5 } }}
+      exit={{ opacity: 0 }}
       id="contact"
-      className="flex justify-center items-center p-4 md:p-[3rem] lg:w-[90%]"
+      className="flex justify-center items-center w-full p-4 md:p-[3rem] lg:w-[90%]"
     >
-      <form className="flex flex-col justify-center items-center w-full gap-[1rem] lg:gap-[2rem]">
+      <form className="flex flex-col justify-center items-center w-full gap-[1rem] lg:gap-[2rem] lg:flex-row">
         {inputForm.map((input, index) => {
           return (
             <Input
@@ -91,7 +95,7 @@ const Contact = () => {
           <p className="z-10">Send</p>
         </button>
       </form>
-    </section>
+    </motion.div>
   );
 };
 

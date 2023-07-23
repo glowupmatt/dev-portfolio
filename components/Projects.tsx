@@ -1,8 +1,11 @@
+"use client";
+
 import React from "react";
 import { projectData } from "@/dataFolder/projectData";
 import Image from "next/image";
 import classNames from "classnames";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const Projects = () => {
   return (
@@ -33,7 +36,10 @@ const Projects = () => {
         <div className="flex flex-col gap-[7rem] md:grid md:grid-cols-2 md:gap-[1rem] lg:justify-items-center lg:h-1/2">
           {projectData.map((data, index) => {
             return (
-              <div
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1, transition: { duration: 0.5 } }}
+                exit={{ opacity: 0 }}
                 key={data.title}
                 className={classNames(
                   "relative flex flex-col justify-end items-center pt-[2rem] px-[2rem] pb-[1rem] rounded-md w-full h-[15rem] backdrop-blur-sm drop-shadow-xl text-black md:w-[21rem] md:h-[13rem] md:mb-[4rem] lg:h-[23rem] lg:w-[27rem] lg:mb-[6rem]",
@@ -89,7 +95,7 @@ const Projects = () => {
                     </Link>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             );
           })}
         </div>

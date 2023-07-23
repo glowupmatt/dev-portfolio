@@ -17,6 +17,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      style={{ scrollBehavior: "smooth" }}
       className="bg-gradient-to-b from-black via-slate-900 to-[#340d4ab5]"
     >
       <body className={inter.className}>{children}</body>

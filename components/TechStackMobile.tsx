@@ -18,9 +18,9 @@ const TechStackMobile = ({ techStackInfo }: TechStackDesktopType) => {
         const isEven = index % 2 === 0;
         return (
           <motion.div
-            initial={{ x: isEven ? 50 : -50 }}
-            whileInView={{ x: 0, transition: { duration: 0.5 } }}
-            exit={{ x: isEven ? -50 : 50 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1, transition: { duration: 0.5 } }}
+            exit={{ opacity: 0 }}
             key={data.title}
             className="relative even:bg-gray-500 odd:bg-white rounded-full drop-shadow-[4rem] flex flex-col justify-center items-center gap-[5px] h-[5rem] w-[5rem] md:h-[8rem] md:w-[8rem]"
           >
