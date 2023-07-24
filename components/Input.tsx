@@ -18,7 +18,6 @@ const Input = ({ input, setFormInput }: InputCompProps) => {
   const [inputValue, setInputValue] = useState("");
   const [error, setError] = useState<boolean>();
 
-  console.log(inputValue);
   const changeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInputValue(e.target.value);
     setFormInput((prev) => {

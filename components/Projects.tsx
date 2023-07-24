@@ -11,13 +11,13 @@ const Projects = () => {
   return (
     <div
       id="projects"
-      className="flex justify-center items-center overflow-hidden lg:h-[90rem] lg:items-start"
+      className="flex justify-center items-center overflow-hidden lg:h-[76rem] lg:items-start p-4"
     >
-      <div className="relative px-[2rem] w-full lg:full">
+      <div className="relative w-full lg:full">
         <h2 className="text-white text-right text-[1.5rem] font-bold mb-[6rem] md:text-[3rem] lg:font-bold lg:text-[4rem] lg:mb-[10rem]">
           Projects
         </h2>
-        <div className="absolute w-[27rem] h-[27rem] right-0 top-[14rem] animate-spin-slow blur-[31px] md:top-[7rem] md:w-full md:right-[10rem] lg:h-full lg:top-[-1rem] lg:right-[41rem]">
+        <div className="absolute w-[27rem] h-[27rem] right-0 top-[14rem] md:animate-spin-slow blur-[31px] md:top-[7rem] md:w-full md:right-[10rem] lg:h-full lg:top-[-1rem] lg:right-[41rem]">
           <Image
             alt=""
             src="/gradient-designs/shape-1.svg"
@@ -25,7 +25,7 @@ const Projects = () => {
             className="object-cover"
           />
         </div>
-        <div className="absolute w-[27rem] h-[27rem] right-0 top-[36rem] animate-spin-slow blur-[31px] md:top-[23rem] md:right-[-13rem] lg:w-[50rem] lg:h-[50rem] lg:top-[18rem]">
+        <div className="absolute w-[27rem] h-[27rem] right-0 top-[36rem] md:animate-spin-slow blur-[31px] md:top-[18rem] md:right-[-13rem] lg:w-[50rem] lg:h-[50rem] lg:top-[18rem]">
           <Image
             alt=""
             src="/gradient-designs/shape-1.svg"
@@ -39,10 +39,9 @@ const Projects = () => {
               <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1, transition: { duration: 0.5 } }}
-                exit={{ opacity: 0 }}
                 key={data.title}
                 className={classNames(
-                  "relative flex flex-col justify-end items-center pt-[2rem] px-[2rem] pb-[1rem] rounded-md w-full h-[15rem] backdrop-blur-sm drop-shadow-xl text-black md:w-[21rem] md:h-[13rem] md:mb-[4rem] lg:h-[23rem] lg:w-[27rem] lg:mb-[6rem]",
+                  "relative flex flex-col justify-end items-center pt-[2rem] px-[2rem] pb-[1rem] rounded-md w-full h-[15rem] backdrop-blur-sm drop-shadow-xl text-black md:w-[21rem] md:h-[13rem] md:mb-[4rem] lg:h-[23rem] lg:w-[27rem] lg:mb-[6rem] xl:h-full xl:w-[50%] xl:max-w-[50rem] xl:max-h-[40rem]",
                   { "bg-[rgb(208,208,208)]": index === 0 },
                   {
                     "bg-white": index === 1,
@@ -54,7 +53,7 @@ const Projects = () => {
                   href={data.projectUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="absolute w-[90%] h-full drop-shadow-2xl top-[-5rem] lg:h-[57%] transition lg:top-[2rem] lg:ease-in-out lg:delay-150  lg:hover:-translate-y-[8rem] lg:hover:scale-100  lg:duration-300 lg:z-10"
+                  className="absolute w-[90%] h-full drop-shadow-2xl top-[-5rem] lg:h-[57%] transition lg:top-[2rem] lg:ease-in-out lg:delay-150  lg:hover:-translate-y-[8rem] lg:hover:scale-100  lg:duration-300 lg:z-10 xl:w-full xl:h-full"
                 >
                   <Image
                     alt=""

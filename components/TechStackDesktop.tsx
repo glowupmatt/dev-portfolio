@@ -13,7 +13,7 @@ type TechStackDesktopType = {
 
 const TechStackDesktop = ({ techStackInfo }: TechStackDesktopType) => {
   return (
-    <div className="grid grid-cols-3 grid-rows-3 gap-[3rem] h-full w-full justify-items-center md:gap-[2rem] lg:grid-cols-2 lg:auto-rows-fr lg:p-[4rem]">
+    <div className="grid grid-cols-3 grid-rows-3 gap-[3rem] h-full w-full justify-items-center md:gap-[2rem] lg:grid-cols-2 lg:auto-rows-fr">
       {techStackInfo.map((data, index) => {
         const isEven = index % 2 === 0;
         return (

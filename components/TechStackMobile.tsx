@@ -20,7 +20,6 @@ const TechStackMobile = ({ techStackInfo }: TechStackDesktopType) => {
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1, transition: { duration: 0.5 } }}
-            exit={{ opacity: 0 }}
             key={data.title}
             className="relative even:bg-gray-500 odd:bg-white rounded-full drop-shadow-[4rem] flex flex-col justify-center items-center gap-[5px] h-[5rem] w-[5rem] md:h-[8rem] md:w-[8rem]"
           >
