@@ -37,8 +37,6 @@ const Projects = () => {
           {projectData.map((data, index) => {
             return (
               <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
                 key={data.title}
                 className={classNames(
                   "relative flex flex-col justify-end items-center pt-[2rem] px-[2rem] pb-[1rem] rounded-md w-full h-[15rem] backdrop-blur-sm drop-shadow-xl text-black md:w-[21rem] md:h-[13rem] md:mb-[4rem] lg:h-[23rem] lg:w-[27rem] lg:mb-[6rem] xl:h-full xl:w-[50%] xl:max-w-[50rem] xl:max-h-[40rem]",
