@@ -56,7 +56,7 @@ const Menu = () => {
             <div className="absolute w-full h-full ">
               <Image
                 alt=""
-                src="/gradient-designs/gradient-5.svg"
+                src="/gradient-designs/gradient-5.png"
                 fill
                 className="object-cover rounded-full "
               />
@@ -75,7 +75,7 @@ const Menu = () => {
             <div className="absolute w-full h-full ">
               <Image
                 alt=""
-                src="/gradient-designs/gradient-one.svg"
+                src="/gradient-designs/gradient-one.png"
                 fill
                 className="object-cover rounded-full "
               />

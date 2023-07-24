@@ -17,7 +17,7 @@ const Projects = () => {
         <h2 className="text-white text-right text-[1.5rem] font-bold mb-[6rem] md:text-[3rem] lg:font-bold lg:text-[4rem] lg:mb-[10rem]">
           Projects
         </h2>
-        <div className="absolute w-[27rem] h-[27rem] right-0 top-[14rem] md:animate-spin-slow blur-[31px] md:top-[7rem] md:w-full md:right-[10rem] lg:h-full lg:top-[-1rem] lg:right-[41rem]">
+        <div className="absolute w-[27rem] h-[27rem] right-0 top-[14rem] md:animate-spin-slow blur-[31px] md:top-[7rem] md:w-full md:right-[10rem] lg:h-full lg:top-[3.4rem] lg:right-[41rem]">
           <Image
             alt=""
             src="/gradient-designs/shape-1.svg"

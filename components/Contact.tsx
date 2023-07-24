@@ -85,7 +85,7 @@ const Contact = () => {
             <div className="absolute w-full h-full ">
               <Image
                 alt=""
-                src="/gradient-designs/gradient-5.svg"
+                src="/gradient-designs/gradient-5.png"
                 fill
                 className="object-cover rounded-full lg:rounded-[5rem]"
               />
