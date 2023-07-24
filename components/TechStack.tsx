@@ -11,7 +11,7 @@ const TechStack = () => {
       id="tech"
       className="h-[30rem] relative w-full overflow-hidden md:h-[33rem] lg:h-full p-4"
     >
-      <div className="absolute w-[27rem] h-[15rem] right-[-14rem] top-[5rem] md:animate-spin-slow blur-[31px] md:w-[38rem] md:h-[32rem] md:right-[-13rem] md:top-[1rem]">
+      <div className="absolute w-[27rem] h-[15rem] right-[-14rem] top-[5rem] md:animate-spin-slow blur-[31px] md:w-[38rem] md:h-[32rem] md:right-[-13rem] md:top-[1rem] hidden md:block">
         <Image
           alt=""
           src="/gradient-designs/shape-1.svg"

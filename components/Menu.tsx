@@ -9,7 +9,7 @@ const Menu = () => {
   return (
     <div className="flex flex-col justify-center items-center overflow-hidden lg:justify-start lg:h-[70rem] p-4">
       <div className="relative font-sans text-center leading-[1.7rem] text-[2rem] text-white my-[3rem] md:text-[5rem] lg:h-[18rem] md:leading-[4rem] lg:flex lg:flex-col lg:justify-center lg:font-bold">
-        <div className="absolute w-[43rem] h-[33rem] right-[-2rem] top-[-3rem] md:right-[13rem] lg:w-[75rem] lg:h-[57rem] lg:right-[22rem] lg:top-[9rem] md:animate-spin-slow blur-[31px]">
+        <div className="absolute w-[43rem] h-[33rem] right-[-2rem] top-[-3rem] md:right-[13rem] lg:w-[75rem] lg:h-[57rem] lg:right-[22rem] lg:top-[9rem] md:animate-spin-slow blur-[31px] hidden md:block">
           <Image
             alt=""
             src="/gradient-designs/shape-1.svg"
@@ -17,7 +17,7 @@ const Menu = () => {
             className="object-cover"
           />
         </div>
-        <div className="absolute hidden lg:block lg:w-[32rem] lg:h-[22rem] lg:right-[-44rem] lg:top-[-2rem] md:animate-spin-slow blur-[31px]">
+        <div className="absolute hidden lg:block lg:w-[32rem] lg:h-[22rem] lg:right-[-44rem] lg:top-[-2rem] md:animate-spin-slow blur-[31px] ">
           <Image
             alt=""
             src="/gradient-designs/shape-1.svg"
