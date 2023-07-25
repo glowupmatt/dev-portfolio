@@ -17,6 +17,7 @@ const TechStack = () => {
           src="/gradient-designs/shape-1.svg"
           fill
           className="object-cover"
+          sizes="100vw"
         />
       </div>
       <div className="h-full flex flex-col justify-center items-center">

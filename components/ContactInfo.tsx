@@ -66,6 +66,7 @@ const ContactInfo = () => {
                       src={data.img}
                       fill
                       className="object-cover"
+                      sizes="100vw"
                     />
                   </div>
                 </div>

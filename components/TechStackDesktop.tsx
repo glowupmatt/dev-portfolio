@@ -30,7 +30,7 @@ const TechStackDesktop = ({ techStackInfo }: TechStackDesktopType) => {
               )}
             >
               <div className="relative lg:h-[4rem] lg:w-[7rem]">
-                <Image alt="" src={data.image} fill />
+                <Image alt="" src={data.image} fill sizes="100vw" />
               </div>
               <p className="text-[9px] text-black lg:text-[2rem]">
                 {data.title}

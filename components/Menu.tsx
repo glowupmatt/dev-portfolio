@@ -15,6 +15,7 @@ const Menu = () => {
             src="/gradient-designs/shape-1.svg"
             fill
             className="object-cover"
+            sizes="100vw"
           />
         </div>
         <div className="absolute hidden lg:block lg:w-[32rem] lg:h-[22rem] lg:right-[-44rem] lg:top-[-2rem] md:animate-spin-slow blur-[31px] ">
@@ -23,6 +24,7 @@ const Menu = () => {
             src="/gradient-designs/shape-1.svg"
             fill
             className="object-cover"
+            sizes="100vw"
           />
         </div>
         <h2 className="z-10">Matthew</h2>
@@ -41,7 +43,7 @@ const Menu = () => {
           </p>
           <div className="flex justify-between w-full items-center">
             <div className="relative w-[30px] h-[30px] self-end md:w-[50px] md:h-[50px]">
-              <Image alt="" src="/icons/hello.png" fill />
+              <Image alt="" src="/icons/hello.png" fill sizes="100vw" />
             </div>
             <p className="text-[10px] md:text-[1rem]">
               Click To See My Projects!
@@ -59,10 +61,11 @@ const Menu = () => {
                 src="/gradient-designs/gradient-5.png"
                 fill
                 className="object-cover rounded-full "
+                sizes="100vw"
               />
             </div>
             <div className="relative w-[20px] h-[20px] md:h-[35px] md:w-[35px]">
-              <Image alt="" src="/icons/tech-stack.svg" fill />
+              <Image alt="" src="/icons/tech-stack.svg" fill sizes="100vw" />
             </div>
             <p className="md:text-[1rem] z-10 text-white lg:text-[2rem]">
               Tech
@@ -78,10 +81,11 @@ const Menu = () => {
                 src="/gradient-designs/gradient-one.png"
                 fill
                 className="object-cover rounded-full "
+                sizes="100vw"
               />
             </div>
             <div className="relative w-[20px] h-[20px] md:h-[35px] md:w-[35px] ">
-              <Image alt="" src="/icons/contact.svg" fill />
+              <Image alt="" src="/icons/contact.svg" fill sizes="100vw" />
             </div>
             <p className="md:text-[1rem] z-10 lg:text-[2rem]">Contact</p>
           </Link>
