@@ -1,17 +1,18 @@
+"use client";
+
 import Image from "next/image";
-import React from "react";
+import Link from "next/link";
+import React, { MouseEventHandler, useRef, useState } from "react";
 
 const ContactInfo = () => {
+  const [copySuccess, setCopySuccess] = useState(false);
+
+  console.log(copySuccess);
   const contactInfo = [
     {
       text: "glowupmatt@gmail.com",
       source: "glowupmatt@gmail.com",
       img: "/envelope-regular.svg",
-    },
-    {
-      text: "Resume",
-      source: "",
-      img: "/public/file-regular.svg",
     },
     { source: "https://github.com/glowupmatt", img: "/github-mark.svg" },
     {
@@ -40,15 +41,24 @@ const ContactInfo = () => {
               something awesome!
             </h3>
           </div>
-          <div className="grid grid-cols-3 auto-rows-auto lg:grid-rows-2 justify-items-start gap-[1rem] md:w-[70%] h-[40%] lg:w-[50%] lg:h-[20rem] max-w-[30rem]">
+          <div className="grid grid-cols-3 auto-rows-auto lg:grid-rows-2 justify-items-start gap-[1rem] md:w-[70%] h-[40%] lg:w-[50%] lg:h-[20rem] max-w-[30rem] xl:max-w-[50%]">
             <div className="flex flex-col col-span-3 w-full gap-4">
               {infoHasTestKey.map((data, index) => {
+                const copyLink = () => {
+                  navigator.clipboard.writeText(data.source);
+                  setCopySuccess(true);
+                };
                 return (
                   <div
                     key={index}
-                    className="relative bg-[white] border-hidden lg:border-solid border h-[6rem] w-full  lg:border-blue-900  justify-center flex  flex-col items-center rounded-[8rem] lg:text-black transition ease-in-out delay-150  hover:bg-blue-900 duration-300 lg:flex-row xl:h-[40rem]"
+                    onClick={copyLink}
+                    className="relative bg-[white] border-hidden lg:border-solid border h-[6rem] w-full cursor-pointer lg:border-blue-300  justify-center flex  flex-col items-center rounded-[8rem] lg:text-black transition ease-in-out delay-150  hover:bg-blue-300 duration-300 lg:flex-row xl:h-[40rem] xl:w-full"
                   >
-                    <p className="absolute">{data.text}</p>
+                    <p className="absolute xl:text-[2rem]">
+                      {copySuccess === false
+                        ? `${data.text}`
+                        : "Copied Email to Clipboard"}
+                    </p>
                   </div>
                 );
               })}
@@ -56,11 +66,14 @@ const ContactInfo = () => {
 
             {noInfoTestKey.map((data, index) => {
               return (
-                <div
+                <Link
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href={data.source}
                   key={index}
-                  className="relative bg-[white]  border-hidden lg:border-solid border h-[4rem] w-full border-blue-900  justify-center flex  items-center rounded-[8rem] lg:text-white transition ease-in-out delay-150  hover:bg-blue-900 duration-300"
+                  className="relative bg-[white]  border-hidden lg:border-solid border h-[4rem] w-full border-blue-300  justify-center flex  items-center rounded-[8rem] lg:text-white transition ease-in-out delay-150  hover:bg-blue-300 duration-300 xl:h-[9rem]"
                 >
-                  <div className="relative w-[1.5rem] h-[1.5rem]">
+                  <div className="relative w-[1.5rem] h-[1.5rem] xl:h-[3rem] xl:w-[3rem]">
                     <Image
                       alt=""
                       src={data.img}
@@ -69,7 +82,7 @@ const ContactInfo = () => {
                       sizes="100vw"
                     />
                   </div>
-                </div>
+                </Link>
               );
             })}
           </div>

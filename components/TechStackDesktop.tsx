@@ -22,7 +22,7 @@ const TechStackDesktop = ({ techStackInfo }: TechStackDesktopType) => {
             whileInView={{ x: 0, transition: { duration: 0.5 } }}
             exit={{ x: isEven ? -300 : 300 }}
             key={data.title}
-            className="relative even:bg-gray-500 odd:bg-white rounded-full drop-shadow-[4rem] flex flex-col justify-center items-center gap-[5px] h-[5rem] w-[5rem] md:h-[8rem] md:w-[8rem] lg:w-full lg:h-[9rem] "
+            className="relative even:bg-gray-500 odd:bg-white rounded-full drop-shadow-[4rem] flex flex-col justify-center items-center gap-[5px] h-[5rem] w-[5rem] md:h-[8rem] md:w-[8rem] lg:w-[25rem] lg:h-[8rem] xl:w-[80%] xl:h-[10rem] "
           >
             <div
               className={classNames(

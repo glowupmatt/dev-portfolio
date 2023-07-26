@@ -37,9 +37,9 @@ const Menu = () => {
           className=" bg-gradient-to-r from-purple-400 via-blue-400 to-yellow-400
     background-animate h-[17rem] w-full rounded-[3rem] flex flex-col justify-between items-center p-[2rem] md::max-w-[30rem] lg:max-w-full lg:h-[30rem] transition  lg:ease-in-out lg:hover:scale-[.96] lg:duration-500"
         >
-          <p className="md:text-[2rem] md:text-start smd:text-[1.5rem]">
+          <p className="md:text-[2rem] md:text-start smd:text-[1.5rem] xl:text-[3rem]">
             Hello! I am Matthew Nicholson and I craft stunning front-end
-            experiences
+            experiences.
           </p>
           <div className="flex justify-between w-full items-center">
             <div className="relative w-[30px] h-[30px] self-end md:w-[50px] md:h-[50px]">

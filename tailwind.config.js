@@ -12,15 +12,11 @@ module.exports = {
       smd: "425px",
       md: "768px",
       lg: "1024px",
-      xl: "1280px",
-      "2xl": "1536px",
+      xl: "2000px",
     },
     extend: {
       animation: {
         "spin-slow": "spin 15s linear infinite",
-      },
-      fontFamily: {
-        serif: ["Satoshi", "General Sans"],
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

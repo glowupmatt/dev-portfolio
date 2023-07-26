@@ -1,8 +1,9 @@
 "use client";
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent, FormEvent, useState } from "react";
 import Input from "./Input";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import axios from "axios";
 
 export type formInputObj = {
   name: string;
@@ -25,7 +26,9 @@ const Contact = () => {
     email: "",
     message: "",
   });
-
+  const [successfulInput, setSuccessfulInput] = useState(false);
+  console.log(textArea);
+  console.log(formInput);
   const inputForm: inputFormArray[] = [
     {
       userInfoKey: "name",
@@ -42,6 +45,20 @@ const Contact = () => {
       value: "",
     },
   ];
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    axios
+      .post("/api/client", formInput)
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      })
+      .finally(() => {
+        setSuccessfulInput(true);
+      });
+  };
 
   const textAreaHandler = (e: ChangeEvent<HTMLTextAreaElement>) => {
     setTextArea(e.target.value);
@@ -55,7 +72,10 @@ const Contact = () => {
 
   return (
     <div className="flex justify-center items-center w-full p-4  lg:p-4">
-      <form className="flex flex-col justify-center items-center w-full gap-[1rem] lg:gap-[2rem] lg:grid lg:grid-cols-4">
+      <form
+        onSubmit={handleSubmit}
+        className="flex flex-col justify-center items-center w-full gap-[1rem] lg:gap-[2rem] lg:grid lg:grid-cols-4"
+      >
         <div className="flex flex-col gap-4 w-full lg:col-span-3">
           <div className="flex flex-col lg:flex-row gap-4 lg:h-[8rem] lg:w-full">
             {inputForm.map((input, index) => {
