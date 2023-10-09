@@ -5,12 +5,20 @@ import { projectData } from "@/dataFolder/projectData";
 import Image from "next/image";
 import classNames from "classnames";
 import Link from "next/link";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 
 const Projects = () => {
   return (
     <div
       id="projects"
-      className="flex justify-center items-center overflow-hidden lg:h-[76rem] lg:items-start p-4 xl:h-[101rem]"
+      className="flex justify-center items-center overflow-hidden lg:h-full lg:items-start p-4 "
     >
       <div className="relative w-full lg:full">
         <h2 className="text-white text-right text-[1.5rem] font-bold mb-[6rem] md:text-[3rem] lg:font-bold lg:text-[4rem] lg:mb-[10rem]">
@@ -22,7 +30,6 @@ const Projects = () => {
             src="/gradient-designs/shape-1.svg"
             fill
             className="object-cover"
-            sizes="100vw"
           />
         </div>
         <div className="absolute w-[27rem] h-[27rem] right-0 top-[36rem] md:animate-spin-slow blur-[31px] md:top-[18rem] md:right-[-13rem] lg:w-[50rem] lg:h-[50rem] lg:top-[18rem] hidden md:block">
@@ -31,72 +38,97 @@ const Projects = () => {
             src="/gradient-designs/shape-1.svg"
             fill
             className="object-cover"
-            sizes="100vw"
           />
         </div>
-        <div className="flex flex-col gap-[7rem] md:grid md:grid-cols-2 md:gap-[1rem] lg:justify-items-center lg:h-1/2 items-center justify-items-center">
+        <div className="flex flex-col gap-[7rem] md:grid md:grid-cols-2 md:gap-[1rem] lg:grid-cols-3 lg:justify-items-center items-center justify-items-center">
           {projectData.map((data, index) => {
+            const isEven = index % 2 === 0;
             return (
-              <div
-                key={data.title}
+              <Card
+                key={data.id}
                 className={classNames(
-                  "relative flex flex-col justify-end items-center pt-[2rem] px-[2rem] pb-[1rem] rounded-md w-full h-[15rem] backdrop-blur-sm drop-shadow-xl text-black md:w-[21rem] md:h-[13rem] md:mb-[4rem] lg:h-[23rem] lg:w-[27rem] lg:mb-[6rem] xl:w-[46rem] xl:h-[36rem]",
-                  { "bg-[rgb(208,208,208)]": index === 0 },
+                  "border-black z-50 h-full w-full",
+                  { "bg-[rgb(208,208,208)]": isEven },
                   {
-                    "bg-white": index === 1,
-                  },
-                  { "bg-[rgb(208,208,208)]": index === 2 }
+                    "bg-white": !isEven,
+                  }
                 )}
               >
                 <Link
                   href={data.projectUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="absolute w-[90%] h-full drop-shadow-2xl top-[-5rem] lg:h-[57%] lg:transition lg:top-[4rem] lg:ease-in-out lg:delay-150  lg:hover:-translate-y-[10rem] lg:hover:scale-100  lg:duration-300 lg:z-10 xl:h-[22rem] xl:w-[43rem] xl:top-[1rem] xl:hover:-translate-y-[0rem]"
+                  className=""
                 >
                   <Image
                     alt=""
-                    src={data.images.desktopView}
-                    fill
-                    className="object-contain"
-                    sizes="100vw"
+                    src={data.projectPhoto}
+                    width={1080}
+                    height={1920}
+                    className="object-contain rounded-lg w-full h-auto"
                   />
                 </Link>
-                <div className="flex flex-col gap-2 justify-center items-center drop-shadow-2xl">
-                  <p className="hidden lg:block">{data.desc}</p>
-                  <h2 className="text-[1.5rem] font-bold">{data.title}</h2>
-                  <div className="flex gap-3">
-                    <Link
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      href={data.githubUrl}
-                      className="relative w-[1.5rem] h-[1.5rem] drop-shadow-2xl cursor-pointer"
-                    >
-                      <Image
-                        alt=""
-                        src="/github-mark.svg"
-                        fill
-                        className="object-contain"
-                        sizes="100vw"
-                      />
-                    </Link>
-                    <Link
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      href={data.projectUrl}
-                      className="relative w-[1.5rem] h-[1.5rem] drop-shadow-2xl cursor-pointer"
-                    >
-                      <Image
-                        alt=""
-                        src="/link-solid.svg"
-                        fill
-                        className="object-contain"
-                        sizes="100vw"
-                      />
-                    </Link>
-                  </div>
+                <CardHeader className="p-0 pt-[2rem]">
+                  <CardTitle className="text-center text-[1.5rem] font-bold md:text-[2rem]">
+                    {data.title}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="gap-3 items-center justify-center grid grid-cols-2 justify-items-center">
+                  {data.techUsed.map((data, index) => {
+                    return (
+                      <div
+                        key={index}
+                        className="flex gap-2 justify-between items-center w-[7rem] h-[3rem]"
+                      >
+                        <p
+                          key={index}
+                          className="text-[0.8rem] text-center md:text-[1rem] font-[500]"
+                        >
+                          {data.title}
+                        </p>
+                        <div className="w-[2rem] h-[2rem]">
+                          <Image
+                            src={data.image}
+                            alt={data.title}
+                            width={100}
+                            height={100}
+                          />
+                        </div>
+                      </div>
+                    );
+                  })}
+                </CardContent>
+                <div className="flex gap-3 justify-center items-end mb-[2rem]">
+                  <Link
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={data.githubUrl}
+                    className="relative w-[1.5rem] h-[1.5rem] drop-shadow-2xl cursor-pointer"
+                  >
+                    <Image
+                      alt=""
+                      src="/github-mark.svg"
+                      fill
+                      className="object-contain"
+                      sizes="100vw"
+                    />
+                  </Link>
+                  <Link
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={data.projectUrl}
+                    className="relative w-[1.5rem] h-[1.5rem] drop-shadow-2xl cursor-pointer"
+                  >
+                    <Image
+                      alt=""
+                      src="/link-solid.svg"
+                      fill
+                      className="object-contain"
+                      sizes="100vw"
+                    />
+                  </Link>
                 </div>
-              </div>
+              </Card>
             );
           })}
         </div>

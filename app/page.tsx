@@ -9,7 +9,7 @@ import ContactInfo from "@/components/ContactInfo";
 import { motion } from "framer-motion";
 export default function Home() {
   return (
-    <div className="flex justify-center items-center overflow-hidden">
+    <div className="flex justify-center items-center overflow-hidden bg-gradient-to-b from-black via-slate-900 to-[#340d4ab5]">
       <div className="flex flex-col gap-[4rem] md:gap-[6rem] lg:gap-2 max-w-[140rem]">
         <Menu />
         <TechStack />
