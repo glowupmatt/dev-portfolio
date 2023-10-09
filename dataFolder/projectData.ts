@@ -78,7 +78,7 @@ export const projectData = [
   {
     id: 4,
     title: "Crypto Planet",
-    projectUrl: "https://audiophile-five-tau.vercel.app/",
+    projectUrl: "https://crypto-planet.vercel.app/",
     githubUrl: "https://github.com/glowupmatt/audiophile",
     techUsed: [
       {
