@@ -11,7 +11,7 @@ export const projectData = [
       },
       {
         title: "Mongo DB",
-        image: "/tech-stack-logos/mongoDB.svg",
+        image: "/tech-stack-logos/mongodb.svg",
       },
       {
         title: "Next Auth",
@@ -66,7 +66,7 @@ export const projectData = [
       },
       {
         title: "Mongo DB",
-        image: "/tech-stack-logos/mongoDB.svg",
+        image: "/tech-stack-logos/mongodb.svg",
       },
       {
         title: "Tailwind CSS",
@@ -113,7 +113,7 @@ export const projectData = [
       },
       {
         title: "Mongo DB",
-        image: "/tech-stack-logos/mongoDB.svg",
+        image: "/tech-stack-logos/mongodb.svg",
       },
       {
         title: "TypeScript",

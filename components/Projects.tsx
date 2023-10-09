@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import { projectData } from "@/dataFolder/projectData";
 import Image from "next/image";
@@ -65,7 +63,14 @@ const Projects = () => {
                     src={data.projectPhoto}
                     width={1080}
                     height={1920}
-                    className="object-contain rounded-lg w-full h-auto"
+                    className="object-contain rounded-lg w-full h-auto hidden md:block"
+                  />
+                  <Image
+                    alt=""
+                    src={data.projectPhoto}
+                    width={300}
+                    height={300}
+                    className="object-contain rounded-lg w-full h-auto md:hidden"
                   />
                 </Link>
                 <CardHeader className="p-0 pt-[2rem]">
