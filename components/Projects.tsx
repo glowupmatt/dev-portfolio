@@ -3,14 +3,7 @@ import { projectData } from "@/dataFolder/projectData";
 import Image from "next/image";
 import classNames from "classnames";
 import Link from "next/link";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const Projects = () => {
   return (

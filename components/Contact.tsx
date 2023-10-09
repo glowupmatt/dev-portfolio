@@ -2,7 +2,6 @@
 import { ChangeEvent, FormEvent, useState } from "react";
 import Input from "./Input";
 import Image from "next/image";
-import { motion } from "framer-motion";
 import axios from "axios";
 
 export type formInputObj = {

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import React, { MouseEventHandler, useRef, useState } from "react";
+import React, { useState } from "react";
 
 const ContactInfo = () => {
   const [copySuccess, setCopySuccess] = useState(false);
