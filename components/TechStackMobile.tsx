@@ -30,7 +30,7 @@ const TechStackMobile = ({ techStackInfo }: TechStackDesktopType) => {
               )}
             >
               <div className="relative w-[30px] h-[30px] md:w-[50px] md:h-[50px]">
-                <Image alt="" src={data.image} fill sizes="100vw" />
+                <Image alt="" src={data.image} width={100} height={100} />
               </div>
               <p className="text-[9px] text-black">{data.title}</p>
             </div>

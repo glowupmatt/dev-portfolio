@@ -45,12 +45,7 @@ const Projects = () => {
                   }
                 )}
               >
-                <Link
-                  href={data.projectUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className=""
-                >
+                <Link href={data.projectUrl} target="_blank" className="">
                   <Image
                     alt=""
                     src={data.projectPhoto}
@@ -61,8 +56,8 @@ const Projects = () => {
                   <Image
                     alt=""
                     src={data.projectPhoto}
-                    width={300}
-                    height={300}
+                    width={600}
+                    height={600}
                     className="object-contain rounded-lg w-full h-auto md:hidden"
                   />
                 </Link>
@@ -96,33 +91,31 @@ const Projects = () => {
                     );
                   })}
                 </CardContent>
-                <div className="flex gap-3 justify-center items-end mb-[2rem]">
+                <div className="flex gap-3 justify-center items-center mb-[2rem]">
                   <Link
                     target="_blank"
-                    rel="noopener noreferrer"
                     href={data.githubUrl}
-                    className="relative w-[1.5rem] h-[1.5rem] drop-shadow-2xl cursor-pointer"
+                    className="relative w-[1.5rem] h-[1.5rem] drop-shadow-2xl cursor-pointer flex justify-center items-center"
                   >
                     <Image
                       alt=""
                       src="/github-mark.svg"
-                      fill
+                      width={100}
+                      height={100}
                       className="object-contain"
-                      sizes="100vw"
                     />
                   </Link>
                   <Link
                     target="_blank"
-                    rel="noopener noreferrer"
                     href={data.projectUrl}
-                    className="relative w-[1.5rem] h-[1.5rem] drop-shadow-2xl cursor-pointer"
+                    className="relative w-[1.5rem] h-[1.5rem] drop-shadow-2xl cursor-pointer flex justify-center items-center"
                   >
                     <Image
                       alt=""
                       src="/link-solid.svg"
-                      fill
+                      width={100}
+                      height={100}
                       className="object-contain"
-                      sizes="100vw"
                     />
                   </Link>
                 </div>
