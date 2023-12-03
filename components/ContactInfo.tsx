@@ -7,7 +7,6 @@ import React, { useState } from "react";
 const ContactInfo = () => {
   const [copySuccess, setCopySuccess] = useState(false);
 
-  console.log(copySuccess);
   const contactInfo = [
     {
       text: "glowupmatt@gmail.com",

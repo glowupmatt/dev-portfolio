@@ -26,8 +26,7 @@ const Contact = () => {
     message: "",
   });
   const [successfulInput, setSuccessfulInput] = useState(false);
-  console.log(textArea);
-  console.log(formInput);
+
   const inputForm: inputFormArray[] = [
     {
       userInfoKey: "name",

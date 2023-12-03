@@ -1,5 +1,31 @@
 export const projectData = [
   {
+    id: 0,
+    title: "Lofi Radio",
+    projectUrl: "https://lofiradio-ecru.vercel.app/",
+    githubUrl: "https://github.com/glowupmatt/lofiradio",
+    techUsed: [
+      {
+        title: "Next.JS",
+        image: "/tech-stack-logos/nextjs.svg",
+      },
+      {
+        title: "Embla Carousel",
+        image:
+          "https://www.embla-carousel.com/static/embla-logo-light-theme-blur-db7093b8d7d20cb8c2429e3f6e05156a.svg",
+      },
+      {
+        title: "Typescript",
+        image: "/tech-stack-logos/typescript.svg",
+      },
+      {
+        title: "CSS",
+        image: "/tech-stack-logos/css3.svg",
+      },
+    ],
+    projectPhoto: "/ProjectPhotos/LofiRadio.png",
+  },
+  {
     id: 1,
     title: "Kanban Board",
     projectUrl: "https://kanban-ecdozt5kp-glowupmatt.vercel.app/",

@@ -3,7 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import classNames from "classnames";
-import Link from "next/link";
+
 
 type TechStackDesktopType = {
   techStackInfo: {
@@ -27,12 +27,10 @@ const TechStackDesktop = ({ techStackInfo }: TechStackDesktopType) => {
             key={data.title}
             className="relative even:bg-gray-500 odd:bg-white rounded-full drop-shadow-[4rem] flex flex-col justify-center items-center gap-[5px] h-[5rem] w-[5rem] md:h-[8rem] md:w-[8rem] lg:w-[20rem] lg:h-[8rem] xl:w-[80%] xl:h-[10rem] "
           >
-            <Link
+            <div
               className={classNames(
-                "flex flex-col justify-center items-center lg:h-full lg:flex-row transition  lg:ease-in-out lg:hover:scale-[1.2] lg:duration-500 gap-4 cursor-pointer"
+                "flex flex-col justify-center items-center lg:h-full lg:flex-row transition  lg:ease-in-out lg:hover:scale-[1.2] lg:duration-500 gap-4"
               )}
-              href={data.link}
-              target="_blank"
             >
               <div className="relative lg:h-[3rem] lg:w-[3rem] self-center flex align-center">
                 <Image
@@ -46,7 +44,7 @@ const TechStackDesktop = ({ techStackInfo }: TechStackDesktopType) => {
               <p className="text-[9px] text-black lg:text-[2rem]">
                 {data.title}
               </p>
-            </Link>
+            </div>
           </motion.div>
         );
       })}

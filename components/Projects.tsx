@@ -38,7 +38,7 @@ const Projects = () => {
               <Card
                 key={data.id}
                 className={classNames(
-                  "border-black z-50 h-full w-full",
+                  "border-black z-50 h-full w-full hover:scale-[1.03] hover:border-white transition duration-500 ease-in-out",
                   { "bg-[rgb(208,208,208)]": isEven },
                   {
                     "bg-white": !isEven,
