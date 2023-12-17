@@ -86,11 +86,6 @@ const ContactInfo = () => {
             })}
           </div>
         </div>
-        {/* <div className="flex justify-end">
-          <div className="relative w-[30px] h-[30px] self-end md:w-[50px] md:h-[50px] top-[-3rem]">
-            <Image alt="" src="/arrow-down-solid.svg" fill />
-          </div>
-        </div> */}
       </section>
     </div>
   );
