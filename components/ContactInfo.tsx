@@ -9,8 +9,8 @@ const ContactInfo = () => {
 
   const contactInfo = [
     {
-      text: "glowupmatt@gmail.com",
-      source: "glowupmatt@gmail.com",
+      text: "thematthewnicholson@gmail.com",
+      source: "thematthewnicholson@gmail.com",
       img: "/envelope-regular.svg",
     },
     { source: "https://github.com/glowupmatt", img: "/github-mark.svg" },
