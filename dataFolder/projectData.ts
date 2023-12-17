@@ -53,7 +53,7 @@ export const projectData = [
   {
     id: 2,
     title: "On The Glow Up",
-    projectUrl: "https://ontheglowup.vercel.app/",
+    projectUrl: "https://www.otgu.xyz/",
     githubUrl: "https://github.com/glowupmatt/ontheglowup",
     techUsed: [
       {
