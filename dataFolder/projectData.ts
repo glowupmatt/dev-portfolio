@@ -28,7 +28,7 @@ export const projectData = [
   {
     id: 1,
     title: "Kanban Board",
-    projectUrl: "https://kanban-ecdozt5kp-glowupmatt.vercel.app/",
+    projectUrl: "https://kanban-pnrj.vercel.app/",
     githubUrl: "https://github.com/glowupmatt/kanban",
     techUsed: [
       {
