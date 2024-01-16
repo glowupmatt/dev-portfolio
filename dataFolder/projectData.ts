@@ -2,7 +2,7 @@ export const projectData = [
   {
     id: 0,
     title: "Lofi Radio",
-    projectUrl: "https://lofiradio-ecru.vercel.app/",
+    projectUrl: "https://lofiradio-proj.vercel.app/",
     githubUrl: "https://github.com/glowupmatt/lofiradio",
     techUsed: [
       {
@@ -28,7 +28,7 @@ export const projectData = [
   {
     id: 1,
     title: "Kanban Board",
-    projectUrl: "https://kanban-ecdozt5kp-glowupmatt.vercel.app/",
+    projectUrl: "https://kanban-proj.vercel.app/",
     githubUrl: "https://github.com/glowupmatt/kanban",
     techUsed: [
       {
