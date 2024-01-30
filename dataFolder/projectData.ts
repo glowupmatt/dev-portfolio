@@ -129,27 +129,27 @@ export const projectData = [
   },
   {
     id: 5,
-    title: "Designo",
-    projectUrl: "https://designo-wmjt-e7s9b6w41-glowupmatt.vercel.app/",
-    githubUrl: "https://github.com/glowupmatt/DESIGNO",
+    title: "Nba Stats",
+    projectUrl: "https://nba-project-iota.vercel.app/",
+    githubUrl: "https://github.com/glowupmatt/nba-project",
     techUsed: [
       {
         title: "Next.JS",
         image: "/tech-stack-logos/nextjs.svg",
       },
       {
+        title: "Node.JS",
+        image: "/tech-stack-logos/node.svg",
+      },
+      {
         title: "Mongo DB",
         image: "/tech-stack-logos/mongodb.svg",
       },
       {
-        title: "TypeScript",
+        title: "Typescript",
         image: "/tech-stack-logos/typescript.svg",
       },
-      {
-        title: "Tailwind CSS",
-        image: "/tech-stack-logos/tailwind.svg",
-      },
     ],
-    projectPhoto: "/ProjectPhotos/designo.png",
+    projectPhoto: "/ProjectPhotos/nba.png",
   },
 ];
