@@ -130,7 +130,7 @@ export const projectData = [
   {
     id: 5,
     title: "Nba Stats",
-    projectUrl: "https://nba-project-iota.vercel.app/",
+    projectUrl: "https://nba-project-demo.vercel.app/",
     githubUrl: "https://github.com/glowupmatt/nba-project",
     techUsed: [
       {
