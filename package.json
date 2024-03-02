@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@builder.io/react": "^3.2.5",
+    "@builder.io/sdk": "^2.2.2",
     "@prisma/client": "^5.0.0",
     "@types/node": "20.4.2",
     "@types/react": "18.2.15",
@@ -17,7 +19,7 @@
     "axios": "^1.4.0",
     "class-variance-authority": "^0.7.0",
     "classnames": "^2.3.2",
-    "clsx": "^2.0.0",
+    "clsx": "^2.1.0",
     "eslint": "8.45.0",
     "eslint-config-next": "13.4.10",
     "framer-motion": "^10.13.0",
