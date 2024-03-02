@@ -2,7 +2,6 @@ import React from "react";
 import { builder } from "@builder.io/sdk";
 import { RenderBuilderContent } from "@/components/builderFiles/RenderBuilderContent";
 
-// // Replace with your Public API Key
 builder.init(process.env.NEXT_PUBLIC_API_KEY as string);
 
 export default async function Page(props: any) {

@@ -3,14 +3,15 @@
 import React, { useRef, useState } from "react";
 import clsx from "clsx";
 import { Builder, BuilderComponent } from "@builder.io/react";
+import Link from "next/link";
 
 type Props = {
   title: string;
-  text: string;
+  link: string;
 };
 
 const HoverCard = (props: Props) => {
-  const { title, text } = props;
+  const { title, link } = props;
   const [isHovered, setIsHovered] = useState(false);
   const hoverRef = useRef(null);
   return (
@@ -19,7 +20,8 @@ const HoverCard = (props: Props) => {
         id="Project break down"
         className="flex flex-col justify-center items-center w-full"
       >
-        <div
+        <Link
+          href={`/blog/${link}`}
           ref={hoverRef}
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
@@ -43,7 +45,7 @@ const HoverCard = (props: Props) => {
               { "bg-purple-100 shadow-2xl": isHovered }
             )}
           />
-        </div>
+        </Link>
       </div>
     </div>
   );
