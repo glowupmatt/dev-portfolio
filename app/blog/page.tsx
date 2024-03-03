@@ -8,17 +8,13 @@ export default async function Page(props: any) {
   const content = await builder
     .get("blog-page", {
       userAttributes: {
-        urlPath: "/" + (props?.params?.page?.join("/") || ""),
+        urlPath: "/blog" + (props?.params?.page?.join("/") || ""),
       },
     })
     .toPromise();
-
   return (
-    <div className="flex flex-col justify-center items-center overflow-hidden bg-gradient-to-b from-black via-slate-900 to-[#340d4ab5] min-h-screen">
-      <div
-        id="Project break down"
-        className="flex flex-col justify-center items-center w-full text-white "
-      >
+    <div className="flex flex-col p-[2rem] justify-center items-center overflow-hidden bg-gradient-to-b from-black via-slate-900 to-[#340d4ab5] min-h-screen">
+      <div className="flex flex-col justify-center items-center w-full text-white text-center">
         <h4 className="text-[2rem] font-bold">Project Break Down</h4>
         <div className="w-full text-[.7rem] max-w-[27rem]">
           <p className="text-center">
