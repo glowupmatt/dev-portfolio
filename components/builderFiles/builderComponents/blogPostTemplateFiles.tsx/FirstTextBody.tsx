@@ -6,6 +6,7 @@ type Props = {
     id: number;
     desc: string;
   }[];
+
   headerThreeStyles: string;
   paragraphStyles: string;
   sectionContainerStyles: string;
@@ -29,7 +30,7 @@ const FirstTextBody = (props: Props) => {
         <div className="">
           <h4 className={`${headerFourStyles}`}>Authorization:</h4>
           <ol className="flex flex-col gap-[1.5rem] list-decimal list-inside">
-            {firstTextBody.map((item: any, index: number) => (
+            {firstTextBody.map((item, index: number) => (
               <li key={item.id} className={`flex flex-col gap-[.2rem]`}>
                 <p className={`${paragraphStyles}`}>
                   {index + 1}.) {item.desc}
