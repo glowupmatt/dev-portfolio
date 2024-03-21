@@ -7,36 +7,45 @@ builder.init(process.env.NEXT_PUBLIC_API_KEY as string);
 
 interface PageProps {
   params: {
-    page: string[];
+    slug: string;
   };
 }
 
 export default async function BlogArticle(props: PageProps) {
-  const content: any = await builder
-    .get("portfolio-blog", {
-      prerender: false,
-      options: { includeRefs: true },
-      query: {
-        "data.handle": props?.params?.page?.join("/"),
-      },
-    })
-    .toPromise();
-  const mainHighlight = content.data.appFunctionalityDesc;
-  const roleData = content.data.roleDisplayData;
-  const secondTextBody = content.data.secondTextBody;
-  const firstTextBody = content.data.textBody;
+  // console.log(props, "props");
+  const content: any = await builder.getAll("blog-post-data", {
+    prerender: false,
+    query: {
+      "data.slug": props.params.slug,
+    },
+  });
+
+  const processedContent = content[0]?.data;
+  console.log(processedContent, "processedContent");
+  const projectTitle = processedContent?.postName;
+  const mainHighlight = processedContent?.firstFunctionalityDescription;
+  const roleData = processedContent?.roleDisplayData;
+  const firstTextBody = processedContent?.firstTextBody;
+  const secondTextBody = processedContent?.secondTextBody;
+  const diagramImage = processedContent?.textBodyImageOne;
+  const headerImage = processedContent?.headerImage;
+  const functionOne = processedContent?.functionFeature;
   return (
     <>
-      <div className="flex justify-center items-center overflow-hidden bg-gradient-to-b min-h-screen from-black via-slate-900 to-[#340d4ab5]">
-        <div className="flex flex-col gap-[4rem] md:gap-[6rem] lg:gap-2 max-w-[100rem] p-4 py-[3rem]">
+      <div className="flex justify-center overflow-hidden bg-gradient-to-b min-h-screen from-black via-slate-900 to-[#340d4ab5]">
+        <div className="flex flex-col gap-[4rem] w-full md:gap-[6rem] lg:gap-2 max-w-[100rem] p-4 py-[3rem]">
           <BlogPostTemplate
             firstTextBody={firstTextBody}
             secondTextBody={secondTextBody}
             roleData={roleData}
             mainHighlight={mainHighlight}
+            diagramImage={diagramImage}
+            headerImage={headerImage}
+            projectTitle={projectTitle}
+            functionOne={functionOne}
           />
         </div>
-        <RenderBuilderContent content={content} model="portfolio-blog" />
+        <RenderBuilderContent content={content} model="blog-post-data" />
       </div>
     </>
   );

@@ -8,7 +8,7 @@ export default async function Page(props: any) {
   const content = await builder
     .get("blog-page", {
       userAttributes: {
-        urlPath: "/blog" + (props?.params?.page?.join("/") || ""),
+        urlPath: "/blog",
       },
     })
     .toPromise();

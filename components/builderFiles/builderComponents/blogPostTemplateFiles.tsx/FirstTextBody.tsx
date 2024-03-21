@@ -6,7 +6,7 @@ type Props = {
     id: number;
     desc: string;
   }[];
-
+  functionOne: string;
   headerThreeStyles: string;
   paragraphStyles: string;
   sectionContainerStyles: string;
@@ -22,15 +22,16 @@ const FirstTextBody = (props: Props) => {
     headerFourStyles,
     diagramImage,
     firstTextBody,
+    functionOne,
   } = props;
   return (
     <div className={`${sectionContainerStyles}`}>
       <h3 className={`text-center ${headerThreeStyles}`}>Overview</h3>
-      <div className="flex flex-col xl:flex-row gap-4">
+      <div className="flex flex-col gap-8">
         <div className="">
-          <h4 className={`${headerFourStyles}`}>Authorization:</h4>
+          <h4 className={`${headerFourStyles}`}>{functionOne}:</h4>
           <ol className="flex flex-col gap-[1.5rem] list-decimal list-inside">
-            {firstTextBody.map((item, index: number) => (
+            {firstTextBody?.map((item, index: number) => (
               <li key={item.id} className={`flex flex-col gap-[.2rem]`}>
                 <p className={`${paragraphStyles}`}>
                   {index + 1}.) {item.desc}
@@ -39,11 +40,11 @@ const FirstTextBody = (props: Props) => {
             ))}
           </ol>
         </div>
-        <div className="relative w-full rounded-lg object-cover overflow-hidden h-[15rem] md:h-[27rem] lg:w-[40rem] xl:w-full xl:h-[40rem]">
+        <div className="flex justify-center relative w-full rounded-lg object-cover overflow-hidden h-[15rem] md:h-[27rem] xl:w-full xl:h-[36rem]">
           <img
             src={diagramImage}
             alt="auth-diagram"
-            className="absolute w-full h-[20rem] top-[-4rem] md:top-[-13rem] md:h-[45rem] lg:top-0 lg:h-full object-cover rounded-lg shadow-lg"
+            className="absolute w-full h-[20rem] top-[-4rem] md:top-[-13rem] md:h-[45rem] lg:top-0 lg:h-full lg:w-[60%] object-cover rounded-lg shadow-lg"
           />
         </div>
       </div>

@@ -8,6 +8,10 @@ import FirstTextBody from "./blogPostTemplateFiles.tsx/FirstTextBody";
 import SecondTextBody from "./blogPostTemplateFiles.tsx/SecondTextBody";
 
 type Props = {
+  diagramImage: string;
+  headerImage: string;
+  projectTitle: string;
+  functionOne: string;
   firstTextBody: {
     id: number;
     desc: string;
@@ -29,8 +33,16 @@ type Props = {
 };
 
 const BlogPostTemplate = (props: Props) => {
-  const { firstTextBody, secondTextBody, roleData, mainHighlight } = props;
-  const diagramImage = "/project-brakdowns/auth-diagram.png";
+  const {
+    firstTextBody,
+    secondTextBody,
+    roleData,
+    mainHighlight,
+    diagramImage,
+    headerImage,
+    projectTitle,
+    functionOne,
+  } = props;
 
   const headerThreeStyles = "text-[1.2rem] font-bold md:text-[2rem]";
   const paragraphStyles =
@@ -39,7 +51,7 @@ const BlogPostTemplate = (props: Props) => {
   const sectionContainerStyles = "flex flex-col gap-[2rem]";
   return (
     <section className="text-white flex flex-col gap-[3rem]">
-      <TitleHeader />
+      <TitleHeader headerImage={headerImage} projectTitle={projectTitle} />
       <RoleDisplay
         roleData={roleData}
         headerThreeStyles={headerThreeStyles}
@@ -52,6 +64,7 @@ const BlogPostTemplate = (props: Props) => {
         sectionContainerStyles={sectionContainerStyles}
         headerFourStyles={headerFourStyles}
         diagramImage={diagramImage}
+        functionOne={functionOne}
       />
       <SecondTextBody
         mainHighlight={mainHighlight}
