@@ -44,7 +44,7 @@ const FirstTextBody = (props: Props) => {
           <img
             src={diagramImage}
             alt="auth-diagram"
-            className="absolute w-full h-[20rem] top-[-4rem] md:top-[-13rem] md:h-[45rem] lg:top-0 lg:h-full lg:w-[60%] object-cover rounded-lg shadow-lg"
+            className="absolute w-full h-[20rem] top-[-4rem] md:top-[-13rem] md:h-[45rem] lg:top-0 lg:h-full lg:w-full object-cover rounded-lg shadow-lg"
           />
         </div>
       </div>

@@ -25,15 +25,14 @@ const SecondTextBody = (props: Props) => {
     headerFourStyles,
     secondTextBody,
   } = props;
-  console.log(mainHighlight, "mainHighlight");
   return (
     <div className={`${sectionContainerStyles}`}>
       <div className="mb-[1rem]">
         <h3 className={`text-center ${headerThreeStyles}`}>
           {mainHighlight.title}
         </h3>
-        <p className={`${paragraphStyles}`}>{mainHighlight.desc}</p>
       </div>
+      <p className={`${paragraphStyles}`}>{mainHighlight.desc}</p>
       <div>
         <ul className="flex flex-col gap-[1.5rem] list-decimal list-inside">
           {secondTextBody?.map((item) => (

@@ -21,7 +21,6 @@ export default async function BlogArticle(props: PageProps) {
   });
 
   const processedContent = content[0]?.data;
-  console.log(processedContent, "processedContent");
   const projectTitle = processedContent?.postName;
   const mainHighlight = processedContent?.firstFunctionalityDescription;
   const roleData = processedContent?.roleDisplayData;
@@ -33,7 +32,7 @@ export default async function BlogArticle(props: PageProps) {
   return (
     <>
       <div className="flex justify-center overflow-hidden bg-gradient-to-b min-h-screen from-black via-slate-900 to-[#340d4ab5]">
-        <div className="flex flex-col gap-[4rem] w-full md:gap-[6rem] lg:gap-2 max-w-[100rem] p-4 py-[3rem]">
+        <div className="flex flex-col gap-[4rem] w-full md:gap-[6rem] lg:gap-2 max-w-[45rem] p-4 py-[3rem]">
           <BlogPostTemplate
             firstTextBody={firstTextBody}
             secondTextBody={secondTextBody}

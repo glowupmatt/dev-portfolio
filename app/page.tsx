@@ -1,7 +1,7 @@
 import Menu from "@/components/Menu";
 import TechStack from "@/components/TechStack";
 import Projects from "@/components/Projects";
-import ContactPage from "@/components/ContactPage";
+import ContactPage from "@/components/contactFormComponents/ContactPage";
 
 export default function Home() {
   return (

@@ -6,6 +6,7 @@ import TitleHeader from "./blogPostTemplateFiles.tsx/TitleHeader";
 import RoleDisplay from "./blogPostTemplateFiles.tsx/RoleDisplay";
 import FirstTextBody from "./blogPostTemplateFiles.tsx/FirstTextBody";
 import SecondTextBody from "./blogPostTemplateFiles.tsx/SecondTextBody";
+import Link from "next/link";
 
 type Props = {
   diagramImage: string;
@@ -44,17 +45,26 @@ const BlogPostTemplate = (props: Props) => {
     functionOne,
   } = props;
 
-  const headerThreeStyles = "text-[1.2rem] font-bold md:text-[2rem]";
+  const headerThreeStyles = "text-[1rem] font-bold md:text-[2rem]";
   const paragraphStyles =
-    "text-[.8rem] font-[500] md:text-[1.5rem] md:font-[300]";
-  const headerFourStyles = "text-[1rem] font-bold md:text-[2rem] ";
+    "text-[.5rem] font-[500] md:text-[1rem] md:font-[300]";
+  const headerFourStyles = "text-[1rem] font-bold md:text-[1.5rem]";
   const sectionContainerStyles = "flex flex-col gap-[2rem]";
   return (
     <section className="text-white flex flex-col gap-[3rem]">
+      <div className="flex w-full justify-between">
+        <Link href="/" className="text-[.8rem] font-bold">
+          Back to Portfolio
+        </Link>
+
+        <Link href="/blog" className="text-[.8rem] font-bold">
+          Back to Blog
+        </Link>
+      </div>
       <TitleHeader headerImage={headerImage} projectTitle={projectTitle} />
       <RoleDisplay
         roleData={roleData}
-        headerThreeStyles={headerThreeStyles}
+        headerFourStyles={headerFourStyles}
         paragraphStyles={paragraphStyles}
       />
       <FirstTextBody

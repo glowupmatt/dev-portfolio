@@ -6,18 +6,18 @@ type Props = {
     title: string;
     content: string;
   }[];
-  headerThreeStyles: string;
+  headerFourStyles: string;
   paragraphStyles: string;
 };
 
 const RoleDisplay = (props: Props) => {
-  const { roleData, headerThreeStyles, paragraphStyles } = props;
+  const { roleData, headerFourStyles, paragraphStyles } = props;
   return (
     <div className="flex flex-col">
       <ul className="flex flex-col gap-[1.5rem]">
         {roleData?.map((item) => (
           <li key={item.id} className="flex flex-col gap-[.2rem]">
-            <h3 className={headerThreeStyles}>{item.title} :</h3>
+            <h4 className={headerFourStyles}>{item.title} :</h4>
             <p className={`${paragraphStyles}`}>{item.content}</p>
           </li>
         ))}

@@ -17,7 +17,7 @@ const Projects = () => {
         </h2>
         <div className="absolute w-[27rem] h-[27rem] right-0 top-[14rem] md:animate-spin-slow blur-[31px] md:top-[7rem] md:w-full md:right-[10rem] lg:h-full lg:top-[3.4rem] lg:left-[-23rem] lg:w-[54rem] hidden md:block">
           <Image
-            alt=""
+            alt="gradient background shape"
             src="/gradient-designs/shape-1.svg"
             fill
             className="object-cover"
@@ -25,7 +25,7 @@ const Projects = () => {
         </div>
         <div className="absolute w-[27rem] h-[27rem] right-0 top-[36rem] md:animate-spin-slow blur-[31px] md:top-[18rem] md:right-[-13rem] lg:w-[50rem] lg:h-[50rem] lg:top-[18rem] hidden md:block">
           <Image
-            alt=""
+            alt="gradient background shape"
             src="/gradient-designs/shape-1.svg"
             fill
             className="object-cover"
@@ -47,14 +47,14 @@ const Projects = () => {
               >
                 <Link href={data.projectUrl} target="_blank" className="">
                   <Image
-                    alt=""
+                    alt="project-photos"
                     src={data.projectPhoto}
                     width={1080}
                     height={1920}
                     className="object-contain rounded-lg w-full h-auto hidden md:block"
                   />
                   <Image
-                    alt=""
+                    alt="project-photos"
                     src={data.projectPhoto}
                     width={600}
                     height={600}
