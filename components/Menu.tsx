@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import { motion } from "framer-motion";
 import ProjectsButton from "./headerButtons/ProjectsButton";
 import ContactButton from "./headerButtons/ContactButton";
 import TechButton from "./headerButtons/TechButton";

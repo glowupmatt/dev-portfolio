@@ -1,9 +1,7 @@
 "use client";
 import axios from "axios";
-import Image from "next/image";
-import Input from "../Input";
 import React, { ChangeEvent, FormEvent, useState } from "react";
-import { formInputObj, inputFormArray } from "./Contact";
+import { formInputObj } from "./Contact";
 import InputForm from "./inputForm/InputForm";
 import SubmitButton from "./inputForm/SubmitButton";
 

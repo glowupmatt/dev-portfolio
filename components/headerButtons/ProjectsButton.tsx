@@ -22,9 +22,18 @@ background-animate h-[17rem] w-full rounded-[3rem] flex flex-col justify-between
           Hello! I am Matthew Nicholson and I craft stunning web experiences.
         </p>
         <div className="flex justify-between w-full items-center">
-          <div className="relative w-[30px] h-[30px] self-end md:w-[50px] md:h-[50px]">
-            <Image alt="" src="/icons/hello.png" fill sizes="100vw" />
-          </div>
+          <motion.div
+            animate={{ rotate: [50, 0, 50] }}
+            transition={{ duration: 3, repeat: Infinity }}
+            className="relative w-[30px] h-[30px] self-end md:w-[50px] md:h-[50px]"
+          >
+            <Image
+              alt="greeting wave"
+              src="/icons/hello.png"
+              fill
+              sizes="100vw"
+            />
+          </motion.div>
           <p className="text-[10px] md:text-[1rem]">
             Click To See My Projects!
           </p>
