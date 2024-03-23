@@ -2,6 +2,7 @@
 import { useState } from "react";
 import ContactForm from "./ContactForm";
 import Image from "next/image";
+import { HighFive } from "./inputForm/CharacterAnimation";
 
 export type formInputObj = {
   name: string;
@@ -24,16 +25,10 @@ const Contact = () => {
       {successfulInput ? (
         <ContactForm setSuccessfulInput={setSuccessfulInput} />
       ) : (
-        <div className="w-full h-[24rem] p-[2rem] gap-[2rem] rounded-[3rem] text-[#d289ff] bg-[#2c2b2c] ring-[5px]ring-black  focus:outline-none lg:h-[32rem] ring-black border-black border-[5px] lg:text-[2rem] justify-center items-center flex">
+        <div className="w-full h-[24rem] p-[2rem] gap-[2rem] rounded-[3rem] text-[#d289ff] bg-[#2c2b2c] ring-[5px]ring-black  focus:outline-none lg:h-[32rem] ring-black border-black border-[5px] lg:text-[2rem] justify-center items-center flex flex-col">
           <p className="text-center self-center">Thank you for your message!</p>
-          <div className="w-full flex content-center items-center">
-            <Image
-              src={"/character-svgs/highFive.svg"}
-              alt="high five characters"
-              width={1920}
-              height={1080}
-              className="h-[7rem] lg:h-[11rem]"
-            />
+          <div className="flex content-center items-center">
+            <HighFive />
           </div>
         </div>
       )}
