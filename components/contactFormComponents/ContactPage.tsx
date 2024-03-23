@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import ContactInfo from "./ContactInfo";
+import ContactInfo from "./contactInfo/ContactInfo";
 import Contact from "./Contact";
 import { motion } from "framer-motion";
 
