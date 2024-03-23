@@ -30,6 +30,7 @@ export const projectData = [
     title: "Kanban Board",
     projectUrl: "https://kanban-proj.vercel.app/",
     githubUrl: "https://github.com/glowupmatt/kanban",
+    blogUrl: "kanban-project",
     techUsed: [
       {
         title: "Next.JS",
@@ -132,6 +133,7 @@ export const projectData = [
     title: "Nba Stats",
     projectUrl: "https://nba-project-demo.vercel.app/",
     githubUrl: "https://github.com/glowupmatt/nba-project",
+    blogUrl: "gfdsgdf",
     techUsed: [
       {
         title: "Next.JS",

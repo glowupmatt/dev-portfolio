@@ -11,6 +11,8 @@ type Props = {
 
 const ContactInfoButton = (props: Props) => {
   const { setCopySuccess = () => {}, copySuccess, data } = props;
+  const textContainer =
+    "relative bg-[white] border-hidden lg:border-solid border h-[4rem] w-full border-black  justify-center flex  items-center rounded-[8rem] lg:text-white transition ease-in-out delay-150 hover:bg-[#58456a] duration-300 xl:h-[9rem] cursor-pointer";
 
   if (data.VARIANT === "EMAIL") {
     const copyLink = () => {
@@ -18,10 +20,7 @@ const ContactInfoButton = (props: Props) => {
       setCopySuccess(true);
     };
     return (
-      <div
-        className="relative bg-[white] border-hidden lg:border-solid border h-[4rem] w-full border-blue-300  justify-center flex  items-center rounded-[8rem] lg:text-white transition ease-in-out delay-150 hover:bg-blue-300 duration-300 xl:h-[9rem] cursor-pointer"
-        onClick={copyLink}
-      >
+      <div className={textContainer} onClick={copyLink}>
         <p className="text-[.8rem] md:text-[1rem] absolute xl:text-[1.5rem] text-black">
           {copySuccess === false ? `${data.text}` : "Copied Email to Clipboard"}
         </p>
@@ -34,7 +33,7 @@ const ContactInfoButton = (props: Props) => {
         target="_blank"
         rel="noopener noreferrer"
         href={data.source}
-        className="relative bg-[white] border-hidden lg:border-solid border h-[4rem] w-full border-blue-300  justify-center flex  items-center rounded-[8rem] lg:text-white transition ease-in-out delay-150 hover:bg-blue-300 duration-300 xl:h-[9rem] cursor-pointer"
+        className={textContainer}
       >
         <div className="relative w-[1.5rem] h-[1.5rem] xl:h-[3rem] xl:w-[3rem]">
           <Image

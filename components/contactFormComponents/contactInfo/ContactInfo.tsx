@@ -1,6 +1,7 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import ContactInfoButton from "./ContactInfoButton";
+import BlogButton from "./BlogButton";
 
 export type contactInfoType = {
   text?: string;
@@ -11,6 +12,16 @@ export type contactInfoType = {
 
 const ContactInfo = () => {
   const [copySuccess, setCopySuccess] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
+  const textRef = useRef<HTMLDivElement>(null);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
 
   const contactInfo: contactInfoType[] = [
     {
@@ -52,23 +63,31 @@ const ContactInfo = () => {
               something awesome!
             </h3>
           </div>
-          <div className="grid grid-cols-3 auto-rows-auto lg:grid-rows-2 justify-items-start gap-[1rem] md:w-[70%] h-[40%] lg:w-full lg:h-[20rem] max-w-[30rem]">
-            <div className="flex flex-col col-span-3 w-full gap-4">
-              {infoHasTestKey.map((data, index) => {
-                return (
-                  <ContactInfoButton
-                    setCopySuccess={setCopySuccess}
-                    copySuccess={copySuccess}
-                    data={data}
-                    key={index}
-                  />
-                );
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <div className="grid grid-cols-3 auto-rows-auto w-full lg:grid-rows-2 justify-items-start gap-[1rem] md:w-[70%]  lg:w-full lg:h-[14rem] xl:h-[20rem] items-center max-w-[30rem]">
+              <div className="flex flex-col col-span-3 w-full gap-4">
+                {infoHasTestKey.map((data, index) => {
+                  return (
+                    <ContactInfoButton
+                      setCopySuccess={setCopySuccess}
+                      copySuccess={copySuccess}
+                      data={data}
+                      key={index}
+                    />
+                  );
+                })}
+              </div>
+
+              {noInfoTestKey.map((data, index) => {
+                return <ContactInfoButton data={data} key={index} />;
               })}
             </div>
-
-            {noInfoTestKey.map((data, index) => {
-              return <ContactInfoButton data={data} key={index} />;
-            })}
+            <BlogButton
+              textRef={textRef}
+              isHovered={isHovered}
+              handleMouseEnter={handleMouseEnter}
+              handleMouseLeave={handleMouseLeave}
+            />
           </div>
         </div>
       </section>

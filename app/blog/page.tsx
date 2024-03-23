@@ -1,8 +1,17 @@
 import React from "react";
 import { builder } from "@builder.io/sdk";
 import { RenderBuilderContent } from "@/components/builderFiles/RenderBuilderContent";
+import type { Metadata } from "next";
 
 builder.init(process.env.NEXT_PUBLIC_API_KEY as string);
+
+export const metadata: Metadata = {
+  title: "MN | Blog",
+  description: "Matthew Nicholson Blog",
+  icons: {
+    icon: "/icon.png",
+  },
+};
 
 export default async function Page(props: any) {
   const content = await builder

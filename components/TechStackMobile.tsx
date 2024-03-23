@@ -16,7 +16,6 @@ const TechStackMobile = ({ techStackInfo }: TechStackDesktopType) => {
   return (
     <div className="grid grid-cols-3 grid-rows-3 gap-[3rem] h-full w-full justify-items-center md:gap-[2rem]">
       {techStackInfo.map((data, index) => {
-        const isEven = index % 2 === 0;
         return (
           <motion.div
             initial={{ opacity: 0 }}

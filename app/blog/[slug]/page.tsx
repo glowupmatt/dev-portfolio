@@ -12,7 +12,6 @@ interface PageProps {
 }
 
 export default async function BlogArticle(props: PageProps) {
-  // console.log(props, "props");
   const content: any = await builder.getAll("blog-post-data", {
     prerender: false,
     query: {

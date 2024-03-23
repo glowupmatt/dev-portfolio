@@ -19,7 +19,6 @@ const ContactForm = (props: Props) => {
   });
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(formInput);
     axios
       .post("/api/client", formInput)
       .then((res) => {
