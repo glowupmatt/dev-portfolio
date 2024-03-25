@@ -1,6 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 type Props = {
   textRef: React.MutableRefObject<HTMLDivElement | null>;
@@ -18,13 +19,13 @@ const BlogButton = (props: Props) => {
       onMouseLeave={handleMouseLeave}
       className="relative flex justify-center items-center self-end"
     >
-      <a
+      <Link
         className="absolute z-10 text-white font-bold text-center"
         target="_blank"
         href="/blog"
       >
         Check out my Blog
-      </a>
+      </Link>
       <motion.div
         animate={{ rotate: [0, 360] }}
         transition={{ duration: 50, repeat: Infinity }}

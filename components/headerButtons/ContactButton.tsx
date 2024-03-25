@@ -23,7 +23,6 @@ const ContactButton = (props: Props) => {
             src="/gradient-designs/gradient-one.png"
             fill
             className="object-cover rounded-full "
-            sizes="100vw"
           />
         </div>
         <div className="relative w-[20px] h-[20px] md:h-[35px] md:w-[35px] ">

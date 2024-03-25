@@ -12,13 +12,11 @@ const SubmitButton = (props: Props) => {
             alt="paper-plane-icon"
             src="/icons/paper-plane-regular.svg"
             fill
-            sizes="100vw"
           />
         </div>
         <div className="absolute w-full h-full ">
           <Image
             alt="gradient-designs"
-            sizes="100vw"
             src="/gradient-designs/gradient-5.png"
             fill
             className="object-cover rounded-full lg:rounded-[5rem]"

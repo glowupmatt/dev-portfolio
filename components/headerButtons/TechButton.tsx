@@ -19,11 +19,10 @@ const TechButton = (props: Props) => {
       >
         <div className="absolute w-full h-full">
           <Image
-            alt=""
+            alt="gradient-designs"
             src="/gradient-designs/gradient-5.png"
             fill
             className="object-cover rounded-full "
-            sizes="100vw"
           />
         </div>
         <div className="relative w-[20px] h-[20px] md:h-[35px] md:w-[35px]">

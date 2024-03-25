@@ -1,4 +1,4 @@
-import Input from "@/components/Input";
+import Input from "@/components/ui/Input";
 import React from "react";
 import { formInputObj, inputFormArray } from "../Contact";
 

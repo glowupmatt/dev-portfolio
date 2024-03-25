@@ -54,7 +54,11 @@ const ProjectInfoDisplay = (props: Props) => {
                 { "justify-center": !data.blogUrl }
               )}
             >
-              <div className={classNames("", { "ml-4": data.blogUrl })}>
+              <div
+                className={classNames("", {
+                  "ml-8 xl:ml-[4rem]": data.blogUrl,
+                })}
+              >
                 <ProjectLinks data={data} />
               </div>
               {data.blogUrl && (
