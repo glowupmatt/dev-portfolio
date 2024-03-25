@@ -82,12 +82,12 @@ const ContactInfo = () => {
                 return <ContactInfoButton data={data} key={index} />;
               })}
             </div>
-            {/* <BlogButton
+            <BlogButton
               textRef={textRef}
               isHovered={isHovered}
               handleMouseEnter={handleMouseEnter}
               handleMouseLeave={handleMouseLeave}
-            /> */}
+            />
           </div>
         </div>
       </section>
