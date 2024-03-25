@@ -12,7 +12,7 @@ type NavContextType = {
 export const NavState = createContext({} as NavContextType);
 const NavContext = (props: Props) => {
   const { children } = props;
-  const [selectedId, setSelectedId] = useState<string>("portfolio");
+  const [selectedId, setSelectedId] = useState<string>("");
   return (
     <NavState.Provider value={{ selectedId, setSelectedId } as NavContextType}>
       {children}

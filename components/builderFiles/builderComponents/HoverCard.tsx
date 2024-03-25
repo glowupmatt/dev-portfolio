@@ -3,8 +3,6 @@
 import React, { useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import clsx from "clsx";
-import { Builder, BuilderComponent } from "@builder.io/react";
-import Link from "next/link";
 
 type Props = {
   title: string;

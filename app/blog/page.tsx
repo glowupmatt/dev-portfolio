@@ -25,8 +25,14 @@ export default async function Page(props: any) {
   return (
     <div className="relative">
       <Navigation />
-      <div className="flex flex-col p-[2rem] justify-center items-center overflow-hidden bg-gradient-to-b from-black via-slate-900 to-[#340d4ab5] min-h-screen">
-        <RenderBuilderContent model={"blog-page"} content={content} />
+      <div className="flex flex-col p-4 justify-center items-center overflow-hidden bg-gradient-to-b from-black via-slate-900 to-[#340d4ab5] min-h-screen">
+        <p className="text-white font-semibold text-[1.5rem]">
+          Explore my projects as I explain the transition from design to
+          practical code implementation.
+        </p>
+        <div className="bg-black/50 w-full h-full p-4 rounded-md">
+          <RenderBuilderContent model={"blog-page"} content={content} />
+        </div>
       </div>
     </div>
   );
