@@ -1,5 +1,5 @@
 import React, { Dispatch, SetStateAction, useState } from "react";
-import { formInputObj } from "../contactFormComponents/Contact";
+import { formInputObj } from "../portfolioComponents/contactFormComponents/Contact";
 import classNames from "classnames";
 
 type InputCompProps = {
