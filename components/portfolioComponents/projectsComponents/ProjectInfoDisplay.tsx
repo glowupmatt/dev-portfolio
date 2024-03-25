@@ -3,7 +3,7 @@ import classNames from "classnames";
 import Link from "next/link";
 import Image from "next/image";
 import React from "react";
-import { Card, CardHeader, CardTitle, CardContent } from "../ui/card";
+import { Card, CardHeader, CardTitle } from "@/components/ui/card";
 import ProjectLinks from "./ProjectLinks";
 import TechUsedList from "./TechUsedList";
 

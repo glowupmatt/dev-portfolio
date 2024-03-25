@@ -20,9 +20,12 @@ const ContactInfoButton = (props: Props) => {
       setCopySuccess(true);
     };
     return (
-      <div className={textContainer} onClick={copyLink}>
+      <div
+        className={`${textContainer} lg:w-[18rem] xl:w-full`}
+        onClick={copyLink}
+      >
         <p className="text-[.8rem] md:text-[1rem] absolute xl:text-[1.5rem] text-black">
-          {copySuccess === false ? `${data.text}` : "Copied Email to Clipboard"}
+          {copySuccess === false ? data.text : "Copied Email to Clipboard"}
         </p>
       </div>
     );

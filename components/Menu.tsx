@@ -1,9 +1,9 @@
 "use client";
 import React from "react";
-import ProjectsButton from "./headerButtons/ProjectsButton";
-import ContactButton from "./headerButtons/ContactButton";
-import TechButton from "./headerButtons/TechButton";
-import HeaderTitle from "./headerButtons/HeaderTitle";
+import ProjectsButton from "./portfolioComponents/headerButtons/ProjectsButton";
+import ContactButton from "./portfolioComponents/headerButtons/ContactButton";
+import TechButton from "./portfolioComponents/headerButtons/TechButton";
+import HeaderTitle from "./portfolioComponents/headerButtons/HeaderTitle";
 
 const Menu = () => {
   return (
