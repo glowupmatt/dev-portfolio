@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import NavContext from "./appContext/NavContext";
+import ProjectContext from "./appContext/ProjectContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,7 +22,9 @@ export default function RootLayout({
   return (
     <html lang="en" style={{ scrollBehavior: "smooth" }}>
       <NavContext>
-        <body className={inter.className}>{children}</body>
+        <ProjectContext>
+          <body className={inter.className}>{children}</body>
+        </ProjectContext>
       </NavContext>
     </html>
   );

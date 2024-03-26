@@ -1,12 +1,21 @@
 import Link from "next/link";
 import React from "react";
 import Image from "next/image";
+import { BuilderElement, Input } from "@builder.io/sdk";
 
 type Props = {
-  data: {
-    githubUrl: string;
-    projectUrl: string;
-  };
+  data:
+    | {
+        [key: string]: any;
+        blocks?: BuilderElement[] | undefined;
+        inputs?: Input[] | undefined;
+        state?:
+          | {
+              [key: string]: any;
+            }
+          | undefined;
+      }
+    | undefined;
 };
 
 const ProjectLinks = (props: Props) => {
@@ -15,7 +24,7 @@ const ProjectLinks = (props: Props) => {
     <div className="flex gap-3 justify-center items-center">
       <Link
         target="_blank"
-        href={data.githubUrl}
+        href={data?.githubUrl}
         className="relative w-[1.5rem] h-[1.5rem] drop-shadow-2xl cursor-pointer flex justify-center items-center"
       >
         <Image
@@ -28,7 +37,7 @@ const ProjectLinks = (props: Props) => {
       </Link>
       <Link
         target="_blank"
-        href={data.projectUrl}
+        href={data?.projectUrl}
         className="relative w-[1.5rem] h-[1.5rem] drop-shadow-2xl cursor-pointer flex justify-center items-center"
       >
         <Image

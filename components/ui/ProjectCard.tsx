@@ -5,38 +5,27 @@ import Image from "next/image";
 import classNames from "classnames";
 import TechUsedList from "../portfolioComponents/projectsComponents/TechUsedList";
 import ProjectLinks from "../portfolioComponents/projectsComponents/ProjectLinks";
+import { BuilderElement, Input } from "@builder.io/sdk";
 
 type Props = {
   data:
     | {
-        id: number;
-        title: string;
-        projectUrl: string;
-        githubUrl: string;
-        techUsed: {
-          title: string;
-          image: string;
-        }[];
-        projectPhoto: string;
-        blogUrl?: undefined;
+        [key: string]: any;
+        blocks?: BuilderElement[] | undefined;
+        inputs?: Input[] | undefined;
+        state?:
+          | {
+              [key: string]: any;
+            }
+          | undefined;
       }
-    | {
-        id: number;
-        title: string;
-        projectUrl: string;
-        githubUrl: string;
-        blogUrl: string;
-        techUsed: {
-          title: string;
-          image: string;
-        }[];
-        projectPhoto: string;
-      };
+    | undefined;
   index: number;
 };
 
 const ProjectCard = (props: Props) => {
   const { data, index } = props;
+  console.log(data);
   const isEven = index % 2 === 0;
   return (
     <Card
@@ -48,17 +37,17 @@ const ProjectCard = (props: Props) => {
         }
       )}
     >
-      <Link href={data.projectUrl} target="_blank" className="">
+      <Link href={data?.projectUrl} target="_blank" className="">
         <Image
           alt="project-photos"
-          src={data.projectPhoto}
+          src={data?.projectPhoto}
           width={1080}
           height={1920}
           className="object-contain rounded-lg w-full h-auto hidden md:block"
         />
         <Image
           alt="project-photos"
-          src={data.projectPhoto}
+          src={data?.projectPhoto}
           width={600}
           height={600}
           className="object-contain rounded-lg w-full h-auto md:hidden"
@@ -66,27 +55,27 @@ const ProjectCard = (props: Props) => {
       </Link>
       <CardHeader className="p-0 pt-[2rem]">
         <CardTitle className="text-center text-[1.5rem] font-bold md:text-[2rem]">
-          {data.title}
+          {data?.title}
         </CardTitle>
       </CardHeader>
       <TechUsedList data={data} />
       <div
         className={classNames(
           "flex items-center py-[1rem] gap-[3rem]",
-          { "justify-between": data.blogUrl },
-          { "justify-center": !data.blogUrl }
+          { "justify-between": data?.blogUrl },
+          { "justify-center": !data?.blogUrl }
         )}
       >
         <div
           className={classNames("", {
-            "ml-8 xl:ml-[4rem]": data.blogUrl,
+            "ml-8 xl:ml-[4rem]": data?.blogUrl,
           })}
         >
           <ProjectLinks data={data} />
         </div>
-        {data.blogUrl && (
+        {data?.blogUrl && (
           <Link
-            href={`/blog/${data.blogUrl}`}
+            href={`/blog/${data?.blogUrl}`}
             target="_blank"
             className="bg-[#b098c7] rounded-l-full h-[4rem] p-[1rem] w-[50%] text-[.5rem] items-center justify-center flex hover:bg-[#58456a] transition duration-300 ease-in-out hover:text-white cursor-pointer"
           >

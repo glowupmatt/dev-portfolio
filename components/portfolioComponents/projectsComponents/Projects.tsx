@@ -1,8 +1,19 @@
-import React from "react";
+"use client";
+import React, { useContext, useEffect } from "react";
+import { ProjectState } from "@/app/appContext/ProjectContext";
 import Image from "next/image";
 import ProjectInfoDisplay from "./ProjectInfoDisplay";
+import { BuilderContent } from "@builder.io/sdk";
 
-const Projects = () => {
+type Props = {
+  content: BuilderContent[];
+};
+
+const Projects = ({ content }: Props) => {
+  const { setProjectData } = useContext(ProjectState);
+  useEffect(() => {
+    setProjectData(content);
+  }, [setProjectData, content]);
   return (
     <div
       id="projects"

@@ -15,13 +15,11 @@ export const metadata: Metadata = {
 };
 
 export default async function Page(props: any) {
-  const content = await builder
-    .get("blog-page", {
-      userAttributes: {
-        urlPath: "/blog",
-      },
-    })
-    .toPromise();
+  const content = await builder.getAll("project-data", {
+    fields: "data",
+  });
+
+  console.log(content);
   return (
     <div className="relative">
       <Navigation />
@@ -31,7 +29,7 @@ export default async function Page(props: any) {
           practical code implementation.
         </p>
         <div className="bg-black/50 w-full h-full p-4 rounded-md">
-          <RenderBuilderContent model={"blog-page"} content={content} />
+          <RenderBuilderContent model={"project-data"} content={content} />
         </div>
       </div>
     </div>

@@ -1,20 +1,27 @@
 import React from "react";
 import { CardContent } from "@/components/ui/card";
 import Image from "next/image";
+import { BuilderElement, Input } from "@builder.io/sdk";
 type Props = {
-  data: {
-    techUsed: {
-      title: string;
-      image: string;
-    }[];
-  };
+  data:
+    | {
+        [key: string]: any;
+        blocks?: BuilderElement[] | undefined;
+        inputs?: Input[] | undefined;
+        state?:
+          | {
+              [key: string]: any;
+            }
+          | undefined;
+      }
+    | undefined;
 };
 
 const TechUsedList = (props: Props) => {
   const { data } = props;
   return (
     <CardContent className="gap-3 items-center justify-center grid grid-cols-2 justify-items-center">
-      {data.techUsed.map((data, index) => {
+      {data?.techUsed.map((data: any, index: number) => {
         return (
           <div
             key={index}
