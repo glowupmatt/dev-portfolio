@@ -1,6 +1,5 @@
 "use client";
 import React, { createContext, useState } from "react";
-import { BuilderContent, BuilderElement, Input } from "@builder.io/sdk";
 import { BuilderContentVariation } from "@builder.io/sdk";
 
 type Props = {

@@ -47,7 +47,7 @@ const BlogPostTemplate = (props: Props) => {
 
   const headerThreeStyles = "text-[1rem] font-bold md:text-[2rem]";
   const paragraphStyles =
-    "text-[.5rem] font-[500] md:text-[1rem] md:font-[300]";
+    "text-[.8rem] font-[500] md:text-[1rem] md:font-[300]";
   const headerFourStyles = "text-[1rem] font-bold md:text-[1.5rem]";
   const sectionContainerStyles = "flex flex-col gap-[2rem]";
   return (

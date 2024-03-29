@@ -40,11 +40,11 @@ const FirstTextBody = (props: Props) => {
             ))}
           </ol>
         </div>
-        <div className="flex justify-center relative w-full rounded-lg object-cover overflow-hidden h-[15rem] md:h-[27rem] xl:w-full xl:h-[36rem]">
+        <div className="flex justify-center w-full rounded-lg object-cover overflow-hidden xl:w-full xl:h-[36rem]">
           <img
             src={diagramImage}
             alt="auth-diagram"
-            className="absolute w-full h-[20rem] top-[-4rem] md:top-[-13rem] md:h-[45rem] lg:top-0 lg:h-full lg:w-full object-cover rounded-lg shadow-lg"
+            className="w-full h-full lg:top-0 lg:w-full object-contain rounded-lg shadow-lg"
           />
         </div>
       </div>

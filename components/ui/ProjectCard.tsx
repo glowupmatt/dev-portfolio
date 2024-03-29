@@ -25,7 +25,6 @@ type Props = {
 
 const ProjectCard = (props: Props) => {
   const { data, index } = props;
-  console.log(data);
   const isEven = index % 2 === 0;
   return (
     <Card
