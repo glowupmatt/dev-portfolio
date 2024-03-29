@@ -19,10 +19,13 @@ type Props = {
 
 const TextDisplay = (props: Props) => {
   const { data } = props;
-  console.log(data);
   return (
     <div className="justify-center rounded-lg absolute z-10 text-white h-full w-full p-4 flex items-start flex-col gap-4 text-start">
-      <h4 className="font-[800] text-[1.5rem] md:text-[2rem]">{data?.title}</h4>
+      <Link href={`/blog/${data?.blogUrl}`}>
+        <h4 className="font-[800] text-[1.5rem] md:text-[2rem]">
+          {data?.title}
+        </h4>
+      </Link>
       <div className="flex flex-col gap-2">
         <p className="text-[.9rem] font-semibold md:text-[1.3rem]">
           Challenge:{" "}

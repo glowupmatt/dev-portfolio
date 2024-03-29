@@ -1,8 +1,8 @@
 "use client";
-import React, { useContext } from "react";
+import React from "react";
 import classNames from "classnames";
 import { motion } from "framer-motion";
-import { NavState } from "@/app/appContext/NavContext";
+
 import Link from "next/link";
 
 type Props = {
@@ -14,7 +14,7 @@ type Props = {
 
 const BlogButton = (props: Props) => {
   const { textRef, isHovered, handleMouseEnter, handleMouseLeave } = props;
-  const { setSelectedId } = useContext(NavState);
+
   return (
     <div
       ref={textRef}
@@ -23,7 +23,6 @@ const BlogButton = (props: Props) => {
       className="relative flex justify-center items-center md:self-end"
     >
       <Link
-        onClick={() => setSelectedId("blog")}
         className="absolute z-10 text-white font-bold text-center p-4"
         href="/blog"
       >

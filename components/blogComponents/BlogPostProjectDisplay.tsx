@@ -53,6 +53,7 @@ const BlogPostProjectDisplay = (props: Props) => {
   const iterableData = Array.from(
     mergePreviewWithProject(projectWithBlogPost, blogPostArray).values()
   );
+
   return (
     <div className="h-full flex flex-col gap-4 rounded-lg w-full lg:max-w-[936px]">
       {iterableData.map((data, index) => {

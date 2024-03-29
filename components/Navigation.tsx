@@ -1,6 +1,6 @@
 "use client";
-import React, { useContext } from "react";
-import { NavState } from "@/app/appContext/NavContext";
+import React from "react";
+import { usePathname } from "next/navigation";
 import Image from "next/image";
 import classNames from "classnames";
 import Link from "next/link";
@@ -8,7 +8,8 @@ import Link from "next/link";
 type Props = {};
 
 const Navigation = (props: Props) => {
-  const { selectedId, setSelectedId } = useContext(NavState);
+  const pathName = usePathname();
+  const currentPath = pathName.split("/")[1];
   const navigationOptions = [
     {
       path: "",
@@ -22,8 +23,8 @@ const Navigation = (props: Props) => {
     },
   ];
   return (
-    <nav className="fixed z-[100] bg-black/40 text-white flex justify-between p-4 w-full items-center">
-      <Link href={"/"} onClick={() => setSelectedId("portfolio")}>
+    <nav className="fixed z-[100] bg-black/90 text-white flex justify-between p-4 w-full items-center">
+      <Link href={"/"}>
         <Image
           src="/logo.png"
           alt="website logo"
@@ -36,15 +37,14 @@ const Navigation = (props: Props) => {
         <ul className="flex justify-center space-x-4">
           {navigationOptions.map((option) => (
             <li
-              onClick={() => setSelectedId(option.id)}
               key={option.text}
               className={classNames(
                 "",
                 {
-                  "font-bold text-purple-500": selectedId === option.id,
+                  "font-bold text-purple-500": currentPath === option.path,
                 },
                 {
-                  "font-200 text-white": selectedId !== option.id,
+                  "font-200 text-white": currentPath !== option.path,
                 }
               )}
             >

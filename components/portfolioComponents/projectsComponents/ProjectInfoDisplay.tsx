@@ -12,7 +12,9 @@ const ProjectInfoDisplay = (props: Props) => {
       {projectData
         .sort((a, b) => a.data?.id - b.data?.id)
         .map((data, index) => {
-          return <ProjectCard key={data.id} data={data.data} index={index} />;
+          return (
+            <ProjectCard key={Math.random()} data={data.data} index={index} />
+          );
         })}
     </div>
   );
