@@ -21,6 +21,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" style={{ scrollBehavior: "smooth" }}>
+      <meta
+        name="google-site-verification"
+        content="IuzFpoymtIWd5ArsR72ilxXQHlKOH5GjUbMKuaX5tWE"
+      />
       <ProjectContext>
         <body className={inter.className}>{children}</body>
       </ProjectContext>
