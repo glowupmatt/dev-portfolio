@@ -1,7 +1,8 @@
+"use client";
 import { BuilderElement, Input } from "@builder.io/sdk";
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
+import { sendGTMEvent } from "@next/third-parties/google";
 import TextDisplay from "./TextDisplay";
 
 type Props = {
@@ -24,7 +25,12 @@ const BlogDisplayProjectCard = (props: Props) => {
   const { data, index } = props;
   return (
     <div className="flex flex-col gap-4 h-full w-full rounded-xl border-solid border-4 border-black overflow-hidden">
-      <div className="relative">
+      <div
+        className="relative"
+        onClick={() =>
+          sendGTMEvent({ event: "buttonClicked", value: "User_Visit_Blog" })
+        }
+      >
         <TextDisplay data={data} />
         <div className="blur-sm brightness-[0.6]">
           <Image

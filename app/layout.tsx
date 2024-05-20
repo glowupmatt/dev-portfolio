@@ -2,7 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import ProjectContext from "./appContext/ProjectContext";
-import Navigation from "@/components/Navigation";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,6 +25,7 @@ export default function RootLayout({
         name="google-site-verification"
         content="IuzFpoymtIWd5ArsR72ilxXQHlKOH5GjUbMKuaX5tWE"
       />
+      <GoogleTagManager gtmId="G-T566SKVN3J" />
       <ProjectContext>
         <body className={inter.className}>{children}</body>
       </ProjectContext>
