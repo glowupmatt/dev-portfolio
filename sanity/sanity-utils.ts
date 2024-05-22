@@ -26,7 +26,9 @@ export async function getPosts() {
           "alt": alt, 
           "description": description
         },
-        categories, 
+        "categories": categories[]->{
+          title
+        }, 
         excerpt,
         body 
       }

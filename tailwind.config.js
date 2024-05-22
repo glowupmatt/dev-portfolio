@@ -16,6 +16,11 @@ module.exports = {
       },
     },
     extend: {
+      fontFamily: {
+        spectral: ["Spectral", "serif"],
+        poppins: ["Poppins", "sans-serif"],
+        "radio-canada": ["Radio Canada Big", "sans-serif"],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
