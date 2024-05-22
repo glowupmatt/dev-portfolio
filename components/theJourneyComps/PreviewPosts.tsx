@@ -11,13 +11,13 @@ const PreviewPosts = (props: Props) => {
   const { post } = props;
   // console.log(post.body[0].children[0].text);
   return (
-    <div className="p-4">
+    <div className="pl-4 pr-4 w-full lg:max-w-[20rem]">
       <Image
         src={post.mainImage.src}
         alt={post.mainImage.alt}
         width={1080}
         height={1920}
-        className="rounded-sm w-full max-w-[40rem] max-h-[10rem] object-cover"
+        className="rounded-sm w-full max-w-[20rem] max-h-[10rem] object-cover"
       />
       <div className="w-full flex flex-col text-center items-start">
         {post.categories &&
@@ -34,12 +34,19 @@ const PreviewPosts = (props: Props) => {
         <h2
           className={textTemplate(
             "h2",
-            "w-full flex flex-col text-center items-start",
+            "w-full flex flex-col text-center items-start font-spectral lg:text-[1.3rem]",
           )}
         >
           {post.title}
         </h2>
-        <p className={textTemplate("p", "text-start")}>{post.excerpt}</p>
+        <p
+          className={textTemplate(
+            "p",
+            "text-start font-spectral lg:text-[.8rem]",
+          )}
+        >
+          {post.excerpt}
+        </p>
       </div>
     </div>
   );

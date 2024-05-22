@@ -35,6 +35,8 @@ export type PostType = {
   slug: string;
   author: Author;
   mainImage: Image;
+  leftSideImage: Image;
+  rightSideImageList: Image[];
   categories: Category[];
   publishedAt: string;
   body: any;

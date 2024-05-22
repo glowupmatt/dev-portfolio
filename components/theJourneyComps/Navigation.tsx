@@ -10,7 +10,7 @@ const Navigation = (props: Props) => {
   const pathName = usePathname();
 
   return (
-    <div className="flex justify-between w-full p-4">
+    <div className="flex justify-between w-full py-8">
       <ul className="flex gap-2">
         <Link href="/the-journey">
           <li
