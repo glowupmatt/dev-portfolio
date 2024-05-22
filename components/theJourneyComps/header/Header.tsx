@@ -21,7 +21,7 @@ const Header = (props: Props) => {
           {mostRecentPost.title}
         </h2>
         <p className="text-[.6rem] text-start font-extralight font-spectral p-1 bg-white text-black rounded-sm drop-shadow-xl mt-2">
-          Click to Vie
+          Click to View
         </p>
       </div>
       <div className="relative w-full h-full blur-[2px]">
