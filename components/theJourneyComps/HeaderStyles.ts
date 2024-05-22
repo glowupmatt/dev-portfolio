@@ -3,9 +3,7 @@ export function textTemplate(headerType: string, classNames: string) {
     case "h1":
       return "text-[130px] font-bold " + classNames;
     case "h2":
-      return (
-        "text-[1.3rem] md:text-[1.5] lg:text-[90px] font-bold " + classNames
-      );
+      return "text-[1rem] lg:text-[20px] font-bold " + classNames;
     case "h3":
       return "text-2xl font-bold " + classNames;
     case "h4":
