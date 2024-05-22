@@ -1,7 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ["cdn.sanity.io"],
     remotePatterns: [
       {
         protocol: "https",
@@ -14,6 +13,12 @@ const nextConfig = {
         hostname: "www.embla-carousel.com",
         port: "",
         pathname: "/static/**",
+      },
+      {
+        protocol: "https",
+        hostname: "cdn.sanity.io",
+        port: "",
+        pathname: "/**",
       },
     ],
     dangerouslyAllowSVG: true,
