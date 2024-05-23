@@ -2,6 +2,7 @@ import React from "react";
 import { Post } from "@/types/Project";
 import Image from "next/image";
 import { textTemplate } from "@/components/theJourneyComps/HeaderStyles";
+import Link from "next/link";
 
 type Props = {
   post: Post;
@@ -9,9 +10,11 @@ type Props = {
 
 const PreviewPosts = (props: Props) => {
   const { post } = props;
-  // console.log(post.body[0].children[0].text);
   return (
-    <div className="pl-4 pr-4 w-full lg:max-w-[20rem]">
+    <Link
+      href={`/the-journey/posts/${post.slug}`}
+      className="pl-4 pr-4 w-full lg:max-w-[20rem]"
+    >
       <Image
         src={post.mainImage.src}
         alt={post.mainImage.alt}
@@ -48,7 +51,7 @@ const PreviewPosts = (props: Props) => {
           {post.excerpt}
         </p>
       </div>
-    </div>
+    </Link>
   );
 };
 
