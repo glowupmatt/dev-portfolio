@@ -24,7 +24,7 @@ const BlogButton = (props: Props) => {
     >
       <Link
         className="absolute z-10 text-white font-bold text-center p-4"
-        href="/blog"
+        href="/the-journey/"
       >
         Check out my Blog
       </Link>
@@ -37,7 +37,7 @@ const BlogButton = (props: Props) => {
             "bg-transparent border-dashed border-2 w-[7rem] h-[7rem] border-white justify-center flex items-center rounded-full transition ease-in-out delay-150 duration-300 xl:h-[9rem] xl:w-[9rem] cursor-pointer",
             {
               "bg-[#58456a]": isHovered,
-            }
+            },
           )}
         ></div>
       </motion.div>

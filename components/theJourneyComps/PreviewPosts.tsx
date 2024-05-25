@@ -1,5 +1,5 @@
 import React from "react";
-import { Post } from "@/types/Project";
+import { Post } from "@/types/PostType";
 import Image from "next/image";
 import { textTemplate } from "@/components/theJourneyComps/HeaderStyles";
 import Link from "next/link";
@@ -13,14 +13,14 @@ const PreviewPosts = (props: Props) => {
   return (
     <Link
       href={`/the-journey/posts/${post.slug}`}
-      className="pl-4 pr-4 w-full lg:max-w-[20rem]"
+      className="pl-4 pr-4 w-full xl:max-w-[20rem]"
     >
       <Image
         src={post.mainImage.src}
         alt={post.mainImage.alt}
         width={1080}
         height={1920}
-        className="rounded-sm w-full max-w-[20rem] max-h-[10rem] object-cover"
+        className="rounded-sm w-full max-h-[10rem] object-cover"
       />
       <div className="w-full flex flex-col text-center items-start">
         {post.categories &&

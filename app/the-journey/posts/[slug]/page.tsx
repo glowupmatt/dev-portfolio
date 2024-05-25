@@ -1,25 +1,71 @@
 import React from "react";
 import BlogTemplate from "../../../../components/theJourneyComps/template/BlogTemplate";
-import Navigation from "../../../../components/theJourneyComps/Navigation";
 import { getPost } from "../../../../sanity/sanity-utils";
-
+import Image from "next/image";
+import { PostType } from "@/types/PostType";
 type Props = {
   params: {
     slug: string;
   };
 };
+type Span = {
+  _type: "span";
+  _key: string;
+  marks: any[];
+  text: string;
+};
 
+type Block = {
+  _type: "block";
+  _key: string;
+  style: string;
+  markDefs: any[];
+  children: Span[];
+};
+type RightSideImageType = {
+  src: string;
+  alt: string;
+};
+
+export const revalidate = 1;
 const page = async (props: Props) => {
   const {
     params: { slug },
   } = props;
-  const post = await getPost(slug);
-  console.log(post);
+  const post: PostType = await getPost(slug);
+
   return (
     <BlogTemplate>
       <div className="min-h-screen w-full max-w-screen-xl px-4">
-        <Navigation />
-        <div className="flex flex-col gap-4 text-center font-spectral"></div>
+        <div className=" flex flex-col gap-[2rem] md:grid grid-cols-3">
+          <Image
+            src={post.leftSideImage.src}
+            alt={post.leftSideImage.alt}
+            width={1080}
+            height={1920}
+          />
+          <div className="flex flex-col gap-4 text-center font-spectral">
+            {post.body.map((block: Block, index: number) => {
+              return <p key={block._key + index}>{block.children[0].text}</p>;
+            })}
+          </div>
+          <div className="flex flex-col gap-4">
+            {post.rightSideImageList &&
+              post.rightSideImageList.map(
+                (image: RightSideImageType, index: number) => {
+                  return (
+                    <Image
+                      key={image.src + index}
+                      src={image.src}
+                      alt={image.alt}
+                      width={1080}
+                      height={1920}
+                    />
+                  );
+                },
+              )}
+          </div>
+        </div>
       </div>
     </BlogTemplate>
   );

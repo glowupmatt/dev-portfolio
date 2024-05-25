@@ -33,7 +33,7 @@ const ProjectCard = (props: Props) => {
         { "bg-[rgb(208,208,208)]": isEven },
         {
           "bg-white": !isEven,
-        }
+        },
       )}
     >
       <Link href={data?.projectUrl} target="_blank" className="">
@@ -62,7 +62,7 @@ const ProjectCard = (props: Props) => {
         className={classNames(
           "flex items-center py-[1rem] gap-[3rem]",
           { "justify-between": data?.blogUrl },
-          { "justify-center": !data?.blogUrl }
+          { "justify-center": !data?.blogUrl },
         )}
       >
         <div
@@ -74,7 +74,7 @@ const ProjectCard = (props: Props) => {
         </div>
         {data?.blogUrl && (
           <Link
-            href={`/blog/${data?.blogUrl}`}
+            href={`/project-breakdowns/${data?.blogUrl}`}
             target="_blank"
             className="bg-[#b098c7] rounded-l-full h-[4rem] p-[1rem] w-[50%] text-[.5rem] items-center justify-center flex hover:bg-[#58456a] transition duration-300 ease-in-out hover:text-white cursor-pointer"
           >

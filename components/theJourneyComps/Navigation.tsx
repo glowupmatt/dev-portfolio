@@ -29,7 +29,8 @@ const Navigation = (props: Props) => {
             className={cn(
               {
                 "bg-white rounded-md text-black":
-                  pathName === "/the-journey/posts",
+                  pathName === "/the-journey/posts" ||
+                  pathName.includes("/posts"),
               },
               "p-1 rounded-md hover:bg-black hover:text-white text-[.8rem]",
             )}

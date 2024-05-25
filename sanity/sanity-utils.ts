@@ -21,16 +21,10 @@ export async function getPosts() {
           "src": leftSideImage.asset->url, 
           "alt": leftSideImage.alt
         },
-        "rightSideImageList": rightSideImageList[]->{
-          "src": asset->url, 
-          "alt": alt, 
-          "description": description
-        },
         "categories": categories[]->{
           title
         }, 
         excerpt,
-        body 
       }
     `,
   );
@@ -57,7 +51,7 @@ export async function getPost(slug: string) {
           "src": leftSideImage.asset->url, 
           "alt": leftSideImage.alt
         },
-        "rightSideImageList": rightSideImageList[]->{
+        "rightSideImageList": rightSideImageList[]{
           "src": asset->url, 
           "alt": alt, 
           "description": description
@@ -67,6 +61,59 @@ export async function getPost(slug: string) {
         }, 
         excerpt,
         body 
+      }
+    `,
+    { slug },
+  );
+}
+
+export async function getGalleries() {
+  const client = createClient({
+    projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
+    dataset: process.env.NEXT_PUBLIC_SANITY_DATASET,
+    apiVersion: process.env.NEXT_PUBLIC_SANITY_API_VERSION,
+  });
+
+  return client.fetch(
+    groq`
+    *[_type == "gallery"] { 
+        title, 
+        "slug": slug.current, 
+        description,
+        "images": images[] {
+          asset->{
+            _id,
+            url
+          },
+          alt,
+          isLandscape
+        }
+      }
+    `,
+  );
+}
+
+export async function getGallery(slug: string) {
+  const client = createClient({
+    projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
+    dataset: process.env.NEXT_PUBLIC_SANITY_DATASET,
+    apiVersion: process.env.NEXT_PUBLIC_SANITY_API_VERSION,
+  });
+
+  return client.fetch(
+    groq`
+    *[_type == "gallery" && slug.current == $slug][0] { 
+        title, 
+        "slug": slug.current, 
+        description,
+        "images": images[] {
+          asset->{
+            _id,
+            url
+          },
+          alt,
+          isLandscape
+        }
       }
     `,
     { slug },
