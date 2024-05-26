@@ -3,6 +3,7 @@ import BlogTemplate from "../../../../components/theJourneyComps/template/BlogTe
 import { getPost } from "../../../../sanity/sanity-utils";
 import Image from "next/image";
 import { PostType } from "@/types/PostType";
+import PostViewHeader from "@/components/theJourneyComps/template/PostViewHeader";
 type Props = {
   params: {
     slug: string;
@@ -36,6 +37,11 @@ const page = async (props: Props) => {
 
   return (
     <BlogTemplate>
+      <PostViewHeader
+        postTitle={post.title}
+        postImage={post.mainImage}
+        excerpt={post.excerpt}
+      />
       <div className="min-h-screen w-full max-w-screen-xl px-4">
         <div className=" flex flex-col gap-[2rem] md:grid grid-cols-3">
           <Image
@@ -54,13 +60,17 @@ const page = async (props: Props) => {
               post.rightSideImageList.map(
                 (image: RightSideImageType, index: number) => {
                   return (
-                    <Image
+                    <div
                       key={image.src + index}
-                      src={image.src}
-                      alt={image.alt}
-                      width={1080}
-                      height={1920}
-                    />
+                      className="w-full h-[242px] relative"
+                    >
+                      <Image
+                        src={image.src}
+                        alt={image.alt}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
                   );
                 },
               )}

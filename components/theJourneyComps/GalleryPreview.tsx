@@ -23,7 +23,7 @@ const GalleryPreview = (props: Props) => {
           className="object-cover"
         />
       </div>
-      <h3>{gallery.title}</h3>
+      <h3 className="font-spectral text-[1.5rem]">{gallery.title}</h3>
     </Link>
   );
 };

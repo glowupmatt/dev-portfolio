@@ -1,4 +1,4 @@
-type Image = {
+export type ImageType = {
   src: string;
   alt: string;
 };
@@ -16,7 +16,7 @@ export type Post = {
   title: string;
   slug: string;
   author: Author;
-  mainImage: Image;
+  mainImage: ImageType;
   categories: Category[];
   publishedAt: string;
   body: any;
@@ -26,7 +26,7 @@ export type Post = {
 type Preview = {
   title: string;
   author: string;
-  media: Image;
+  media: ImageType;
   subtitle: string;
 };
 
@@ -34,9 +34,9 @@ export type PostType = {
   title: string;
   slug: string;
   author: Author;
-  mainImage: Image;
-  leftSideImage: Image;
-  rightSideImageList: Image[];
+  mainImage: ImageType;
+  leftSideImage: ImageType;
+  rightSideImageList: ImageType[];
   categories: Category[];
   publishedAt: string;
   body: any;

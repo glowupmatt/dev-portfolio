@@ -2,7 +2,6 @@ import { getGallery } from "@/sanity/sanity-utils";
 import React from "react";
 import { GalleryType } from "@/types/GalleryType";
 import BlogTemplate from "@/components/theJourneyComps/template/BlogTemplate";
-import Image from "next/image";
 import GalleryTemplate from "@/components/theJourneyComps/template/GalleryTemplate";
 
 type Props = {

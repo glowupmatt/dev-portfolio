@@ -1,6 +1,16 @@
+"use client";
 import { GalleryType } from "@/types/GalleryType";
 import React from "react";
 import Image from "next/image";
+import ImageExpand from "../ImageExpand";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 
 type Props = {
   VARIANT: "HORIZONTAL" | "VERTICAL";
@@ -20,15 +30,22 @@ const GalleryTemplate = (props: Props) => {
             .map((image, index) => {
               return (
                 <div className="grid gap-4" key={image.asset._id + index}>
-                  <div>
-                    <Image
-                      src={image.asset.url}
-                      alt={image.alt}
-                      className={`h-auto max-w-full`}
-                      width={1920}
-                      height={1080}
-                    />
-                  </div>
+                  <Dialog>
+                    <DialogTrigger>
+                      <div>
+                        <ImageExpand
+                          imageSrc={image.asset.url}
+                          imageAlt={image.alt}
+                        />
+                      </div>
+                    </DialogTrigger>
+                    <DialogContent className="p-4 md:p-0 border-0 bg-black">
+                      <ImageExpand
+                        imageSrc={image.asset.url}
+                        imageAlt={image.alt}
+                      />
+                    </DialogContent>
+                  </Dialog>
                 </div>
               );
             })}

@@ -16,7 +16,7 @@ const MostRecentPost = (props: Props) => {
       className="hidden md:block"
     >
       <Image src={photo.src} alt={photo.alt} width={630} height={640} />
-      <div className="max-w-[630px] text-center flex gap-4 flex-col p-4 mt-[64px]">
+      <div className="max-w-[630px] text-center flex gap-4 flex-col p-4 mt-[2rem]">
         <p className="font-spectral md:text-[60px]">{mostRecentPost.title}</p>
         <p className="font-spectral md:text-[1rem]">{mostRecentPost.excerpt}</p>
       </div>

@@ -37,7 +37,7 @@ const PreviewPosts = (props: Props) => {
         <h2
           className={textTemplate(
             "h2",
-            "w-full flex flex-col text-center items-start font-spectral lg:text-[1.3rem]",
+            "w-full flex flex-col text-center items-start font-spectral lg:text-[1.5rem]",
           )}
         >
           {post.title}

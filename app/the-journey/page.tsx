@@ -15,13 +15,12 @@ const page = async (props: Props) => {
   const posts: PostType[] = await getPosts();
   const mostRecentPost = posts[0];
   const galleries: GalleriesType = await getGalleries();
-  console.log(posts);
   return (
     <BlogTemplate>
       <Header mostRecentPost={mostRecentPost} />
       <div className="flex justify-center w-full pt-[2rem] md:justify-between md:pt-[114px]">
         <MostRecentPost mostRecentPost={mostRecentPost} />
-        <div className="flex flex-col lg:w-[35rem]">
+        <div className="flex flex-col gap-8 lg:w-[35rem]">
           <section className="flex flex-col items-center justify-center md:justify-start gap-4">
             <h3 className="font-spectral lg:text-[1.5rem]">
               Most Recent Posts
