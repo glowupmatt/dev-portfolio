@@ -18,7 +18,7 @@ const Navigation = (props: Props) => {
               {
                 "bg-white rounded-md text-black": pathName === "/the-journey",
               },
-              "p-1 rounded-md hover:bg-black hover:text-white text-[.8rem]",
+              "p-1 rounded-md hover:bg-black hover:text-white text-[.8rem] md:text-[1rem]",
             )}
           >
             Home
@@ -32,7 +32,7 @@ const Navigation = (props: Props) => {
                   pathName === "/the-journey/posts" ||
                   pathName.includes("/posts"),
               },
-              "p-1 rounded-md hover:bg-black hover:text-white text-[.8rem]",
+              "p-1 rounded-md hover:bg-black hover:text-white text-[.8rem] md:text-[1rem]",
             )}
           >
             Posts
@@ -44,7 +44,7 @@ const Navigation = (props: Props) => {
               {
                 "bg-white rounded-md text-black": pathName === "/",
               },
-              "p-1 rounded-md hover:bg-black hover:text-white text-[.8rem]",
+              "p-1 rounded-md hover:bg-black hover:text-white text-[.8rem] md:text-[1rem]",
             )}
           >
             Portfolio
@@ -52,7 +52,7 @@ const Navigation = (props: Props) => {
         </Link>
       </ul>
 
-      <h1 className="text-[1rem] font-light tracking-wide font-spectral self-center">
+      <h1 className="text-[1rem] font-light tracking-wide font-spectral self-center md:text-[1.3rem]">
         The Journey
       </h1>
     </div>

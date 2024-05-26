@@ -8,7 +8,7 @@ type Props = {
 const BlogTemplate = (props: Props) => {
   const { children } = props;
   return (
-    <div className="min-h-screen bg-[#25292B] text-white flex md:justify-center md:items-center">
+    <div className="min-h-screen bg-gradient-to-b from-[#25292B] to-gray-600 text-white flex md:justify-center md:items-center">
       <div className="w-full max-w-screen-xl px-4">
         <Navigation />
         {children}

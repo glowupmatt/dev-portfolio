@@ -11,6 +11,8 @@ export type GalleryType = {
   title: string;
   slug: string;
   description: string;
+  publishedAt: string;
+  category: string;
   images: ImageType[];
 };
 

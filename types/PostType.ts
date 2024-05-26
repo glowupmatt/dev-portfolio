@@ -7,17 +7,12 @@ type Author = {
   name: string;
 };
 
-type Category = {
-  title: string;
-  description: string;
-};
-
 export type Post = {
   title: string;
   slug: string;
   author: Author;
   mainImage: ImageType;
-  categories: Category[];
+  category: string;
   publishedAt: string;
   body: any;
   excerpt: string;
@@ -37,7 +32,7 @@ export type PostType = {
   mainImage: ImageType;
   leftSideImage: ImageType;
   rightSideImageList: ImageType[];
-  categories: Category[];
+  category: string;
   publishedAt: string;
   body: any;
   excerpt: string;

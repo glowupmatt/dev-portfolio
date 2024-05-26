@@ -81,10 +81,16 @@ export default defineType({
       ],
     },
     {
-      name: "categories",
-      title: "Categories",
-      type: "array",
-      of: [{ type: "reference", to: { type: "category" } }],
+      name: "category",
+      title: "Category",
+      type: "string",
+      options: {
+        list: [
+          { title: "Gallery", value: "gallery" },
+          { title: "Post", value: "post" },
+        ],
+        layout: "dropdown",
+      },
     },
     {
       name: "publishedAt",

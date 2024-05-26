@@ -1,10 +1,4 @@
 import React from "react";
-import {
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-} from "@/components/ui/dialog";
 import Image from "next/image";
 
 type Props = {

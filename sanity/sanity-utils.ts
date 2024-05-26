@@ -21,9 +21,7 @@ export async function getPosts() {
           "src": leftSideImage.asset->url, 
           "alt": leftSideImage.alt
         },
-        "categories": categories[]->{
-          title
-        }, 
+        category, 
         excerpt,
       }
     `,
@@ -56,9 +54,7 @@ export async function getPost(slug: string) {
           "alt": alt, 
           "description": description
         },
-        "categories": categories[]->{
-          title
-        }, 
+        category,
         excerpt,
         body 
       }
@@ -80,6 +76,8 @@ export async function getGalleries() {
         title, 
         "slug": slug.current, 
         description,
+        publishedAt,
+        category,
         "images": images[] {
           asset->{
             _id,

@@ -12,9 +12,9 @@ const GalleryPreview = (props: Props) => {
   return (
     <Link
       href={`/the-journey/posts/gallery/${gallery.slug}`}
-      className="flex flex-col gap-4 p-4"
+      className="flex flex-col gap-4 p-4 w-full"
     >
-      <div className="relative w-full lg:w-[13rem] h-[10rem] xl:w-[15rem]">
+      <div className="relative w-full h-[10rem] lg:min-h-[17rem]">
         <Image
           key={gallery.images[0].asset._id}
           src={gallery.images[0].asset.url}

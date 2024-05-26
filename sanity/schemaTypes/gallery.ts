@@ -25,6 +25,23 @@ export default defineType({
       type: "text",
     },
     {
+      name: "publishedAt",
+      title: "Published at",
+      type: "datetime",
+    },
+    {
+      name: "category",
+      title: "Category",
+      type: "string",
+      options: {
+        list: [
+          { title: "Gallery", value: "gallery" },
+          { title: "Post", value: "post" },
+        ],
+        layout: "dropdown",
+      },
+    },
+    {
       name: "images",
       title: "Images",
       type: "array",

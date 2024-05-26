@@ -11,9 +11,9 @@ const PostViewHeader = (props: Props) => {
   const { postTitle, postImage, excerpt } = props;
   return (
     <div className="mb-[5rem] relative">
-      <div className="absolute z-10 w-full h-full flex flex-col gap-[1rem] items-center md:items-start justify-center p-8">
+      <div className="absolute z-10 w-full h-full flex flex-col gap-[1rem] items-start md:items-start justify-center p-8">
         <h3
-          className="text-[1rem] md:text-[4rem] font-spectral font-bold tracking-widest"
+          className="text-[2rem] md:text-[4rem] font-spectral font-bold tracking-widest"
           style={{ textShadow: "1px 2px 1rem #000000" }}
         >
           {postTitle}
@@ -31,6 +31,7 @@ const PostViewHeader = (props: Props) => {
           alt={postImage.alt}
           width={1920}
           height={1080}
+          className="object-cover max-h-[15rem] md:max-h-[36rem]"
         />
       </div>
     </div>
