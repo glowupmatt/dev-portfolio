@@ -14,7 +14,7 @@ const PostHeader = (props: Props) => {
       <div className="absolute z-10 w-full h-full flex flex-col gap-[.5rem] md:gap-[1rem] items-center justify-center">
         <h2
           className={
-            "font-spectral text-[1.5rem] text-start md:text-[90px] drop-shadow-xl tracking-widest"
+            "font-spectral text-[1.5rem] md:text-[35px] lg:text-[70px] drop-shadow-xl tracking-widest lg:px-[2rem] text-center"
           }
         >
           {mostRecentPost.title}
@@ -24,7 +24,7 @@ const PostHeader = (props: Props) => {
         </p>
         <Link
           href={`/the-journey/posts/${mostRecentPost.slug}`}
-          className="text-[.8rem] md:text-[1rem] text-start font-extralight font-spectral p-1 bg-white text-black rounded-sm drop-shadow-xl hover:bg-black hover:text-white transition-all duration-300 ease-in-out"
+          className="text-[.8rem] md:text-[1rem] text-start font-radio-canada font-light p-1 bg-white text-black rounded-sm drop-shadow-xl hover:bg-black hover:text-white transition-all duration-300 ease-in-out"
         >
           Click to View
         </Link>

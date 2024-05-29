@@ -23,7 +23,7 @@ const GalleryTemplate = (props: Props) => {
     return (
       <div className="flex gap-4">
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-          {data.images
+          {data?.images
             .filter((image) => {
               return !image.isLandscape;
             })
@@ -55,20 +55,29 @@ const GalleryTemplate = (props: Props) => {
   }
   return (
     <div className="flex flex-col gap-4">
-      {data.images
+      {data?.images
         .filter((image) => {
           return image.isLandscape;
         })
         .map((image, index) => {
           return (
             <div key={image.asset._id + index} className="relative w-full">
-              <Image
-                src={image.asset.url}
-                alt={image.alt}
-                width={1920}
-                height={1080}
-                className="object-fill"
-              />
+              <Dialog>
+                <DialogTrigger>
+                  <div>
+                    <ImageExpand
+                      imageSrc={image.asset.url}
+                      imageAlt={image.alt}
+                    />
+                  </div>
+                </DialogTrigger>
+                <DialogContent className="p-4 md:p-0 border-0 bg-black">
+                  <ImageExpand
+                    imageSrc={image.asset.url}
+                    imageAlt={image.alt}
+                  />
+                </DialogContent>
+              </Dialog>
             </div>
           );
         })}

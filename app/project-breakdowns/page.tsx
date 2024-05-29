@@ -8,7 +8,7 @@ import BlogPostProjectDisplay from "@/components/blogComponents/BlogPostProjectD
 builder.init(process.env.NEXT_PUBLIC_API_KEY as string);
 
 export const metadata: Metadata = {
-  title: "MN | Project BrakeDowns",
+  title: "MN | Project Breakdowns",
   description: "Matthew Nicholson Blog",
   icons: {
     icon: "../icon.png",

@@ -17,6 +17,9 @@ module.exports = {
       },
     },
     extend: {
+      boxShadow: {
+        white: "0 0 1rem 0 rgba(255, 255, 255, 0.5)",
+      },
       fontFamily: {
         spectral: ["Spectral", "serif"],
         poppins: ["Poppins", "sans-serif"],

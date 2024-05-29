@@ -14,7 +14,7 @@ const PreviewPostBody = (props: Props) => {
   return (
     <Link
       href={`/the-journey/posts/${post.slug}`}
-      className="pl-4 pr-4 w-full flex flex-col gap-4"
+      className="pl-4 pr-4 w-full flex flex-col gap-4 hover:shadow-2xl transition-all duration-300 ease-in-out rounded-md"
     >
       <Image
         src={post.mainImage.src}

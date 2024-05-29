@@ -12,7 +12,7 @@ const GalleryPreview = (props: Props) => {
   return (
     <Link
       href={`/the-journey/posts/gallery/${gallery.slug}`}
-      className="flex flex-col gap-4 p-4 w-full"
+      className="flex flex-col gap-4 p-4 w-full hover:shadow-2xl transition-all duration-300 ease-in-out rounded-md"
     >
       <div className="relative w-full h-[10rem] lg:min-h-[17rem]">
         <Image

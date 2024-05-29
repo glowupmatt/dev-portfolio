@@ -27,8 +27,8 @@ const PostViewHeader = (props: Props) => {
       </div>
       <div className="relative w-full h-full">
         <Image
-          src={postImage.src}
-          alt={postImage.alt}
+          src={postImage?.src}
+          alt={postImage?.alt}
           width={1920}
           height={1080}
           className="object-cover max-h-[15rem] md:max-h-[36rem]"

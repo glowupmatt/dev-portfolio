@@ -13,7 +13,7 @@ const BlogRecentPost = (props: Props) => {
   return (
     <Link
       href={`/the-journey/posts/${mostRecentPost.slug}`}
-      className="hidden md:block"
+      className="hidden md:block hover:shadow-2xl transition-all duration-300 ease-in-out rounded-md"
     >
       <Image
         src={photo.src}
