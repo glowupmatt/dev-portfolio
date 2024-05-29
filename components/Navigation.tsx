@@ -17,9 +17,14 @@ const Navigation = (props: Props) => {
       id: "portfolio",
     },
     {
-      path: "blog",
+      path: "project-breakdowns",
+      text: "Project Breakdowns",
+      id: "project-breakdowns",
+    },
+    {
+      path: "the-journey",
       text: "Blog",
-      id: "blog",
+      id: "the-journey",
     },
   ];
   return (
@@ -45,7 +50,7 @@ const Navigation = (props: Props) => {
                 },
                 {
                   "font-200 text-white": currentPath !== option.path,
-                }
+                },
               )}
             >
               <Link href={`/${option.path}`}>{option.text}</Link>

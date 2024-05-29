@@ -14,6 +14,12 @@ const nextConfig = {
         port: "",
         pathname: "/static/**",
       },
+      {
+        protocol: "https",
+        hostname: "cdn.sanity.io",
+        port: "",
+        pathname: "/**",
+      },
     ],
     dangerouslyAllowSVG: true,
   },

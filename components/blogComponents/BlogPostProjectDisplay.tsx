@@ -13,7 +13,7 @@ type DataType = {
     projectPhoto: string;
     projectUrl: string;
     blogUrl: string;
-    id: 1;
+    id: number;
     techUsed: {
       title: string;
       image: string;
@@ -28,8 +28,8 @@ const BlogPostProjectDisplay = (props: Props) => {
   }
   const projectWithBlogPost = content.filter(hasBlogUrl);
   function mergePreviewWithProject(
-    projectData: any,
-    blogPreview: any
+    projectData: BuilderContent[],
+    blogPreview: BuilderContent[],
   ): Map<string, DataType> {
     const res = new Map();
     projectData.forEach((item: any) => {
@@ -51,7 +51,7 @@ const BlogPostProjectDisplay = (props: Props) => {
     return res;
   }
   const iterableData = Array.from(
-    mergePreviewWithProject(projectWithBlogPost, blogPostArray).values()
+    mergePreviewWithProject(projectWithBlogPost, blogPostArray).values(),
   );
 
   return (

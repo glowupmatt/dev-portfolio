@@ -51,7 +51,7 @@ const BlogPostTemplate = (props: Props) => {
   const headerFourStyles = "text-[1rem] font-bold md:text-[1.5rem]";
   const sectionContainerStyles = "flex flex-col gap-[2rem]";
   return (
-    <section className="text-white flex flex-col gap-[3rem]">
+    <section className="text-white flex flex-col gap-[3rem] mt-[2rem]">
       <div className="flex w-full justify-between">
         <Link href="/" className="text-[.8rem] font-bold">
           Back to Portfolio

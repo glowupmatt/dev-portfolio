@@ -28,7 +28,7 @@ const FirstTextBody = (props: Props) => {
     <div className={`${sectionContainerStyles}`}>
       <h3 className={`text-center ${headerThreeStyles}`}>Overview</h3>
       <div className="flex flex-col gap-8">
-        <div className="">
+        <div>
           <h4 className={`${headerFourStyles}`}>{functionOne}:</h4>
           <ol className="flex flex-col gap-[1.5rem] list-decimal list-inside">
             {firstTextBody?.map((item, index: number) => (
