@@ -24,9 +24,13 @@ type DataType = {
 const BlogPostProjectDisplay = (props: Props) => {
   const { content, blogPostArray } = props;
   function hasBlogUrl(item: any): boolean {
-    return Object.keys(item.data).includes("blogUrl");
+    return (
+      Object.keys(item.data).includes("blogUrl") &&
+      item.data.blogUrl.trim() !== ""
+    );
   }
   const projectWithBlogPost = content.filter(hasBlogUrl);
+
   function mergePreviewWithProject(
     projectData: BuilderContent[],
     blogPreview: BuilderContent[],
@@ -48,6 +52,7 @@ const BlogPostProjectDisplay = (props: Props) => {
         });
       }
     });
+
     return res;
   }
   const iterableData = Array.from(
