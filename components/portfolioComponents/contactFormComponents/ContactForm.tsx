@@ -1,6 +1,7 @@
 "use client";
 import axios from "axios";
 import React, { ChangeEvent, FormEvent, useState } from "react";
+
 import { formInputObj } from "./Contact";
 import InputForm from "./inputForm/InputForm";
 import SubmitButton from "./inputForm/SubmitButton";
@@ -17,19 +18,21 @@ const ContactForm = (props: Props) => {
     email: "",
     message: "",
   });
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    axios
-      .post("/api/client", formInput)
-      .then((res) => {
-        console.log(res);
-      })
-      .catch((err) => {
-        console.log(err);
-      })
-      .finally(() => {
-        setSuccessfulInput(true);
-      });
+    const response = await fetch("https://formspree.io/f/xwpvkake", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formInput),
+    });
+
+    if (response.ok) {
+      setSuccessfulInput(true);
+    } else {
+      setSuccessfulInput(false);
+    }
   };
 
   const textAreaHandler = (e: ChangeEvent<HTMLTextAreaElement>) => {
@@ -44,7 +47,7 @@ const ContactForm = (props: Props) => {
 
   return (
     <form
-      onSubmit={handleSubmit}
+      onSubmit={handleFormSubmit}
       className="flex flex-col justify-center items-center w-full gap-[1rem] lg:gap-[2rem]"
     >
       <InputForm

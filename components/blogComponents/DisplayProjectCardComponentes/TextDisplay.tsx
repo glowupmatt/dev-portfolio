@@ -19,6 +19,7 @@ type Props = {
 
 const TextDisplay = (props: Props) => {
   const { data } = props;
+  if (data && !data.roleDisplayData) return null;
   return (
     <div className="justify-center rounded-lg absolute z-10 text-white h-full w-full p-4 flex items-start flex-col gap-4 text-start">
       <Link href={`/project-breakdowns/${data?.blogUrl}`}>

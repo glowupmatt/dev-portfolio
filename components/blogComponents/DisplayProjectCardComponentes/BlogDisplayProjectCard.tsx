@@ -23,6 +23,7 @@ type Props = {
 
 const BlogDisplayProjectCard = (props: Props) => {
   const { data, index } = props;
+  if (data && !data.roleDisplayData) return null;
   return (
     <div className="flex flex-col gap-4 h-full w-full rounded-xl border-solid border-4 border-black overflow-hidden">
       <div
