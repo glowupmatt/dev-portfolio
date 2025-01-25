@@ -24,6 +24,7 @@ type Props = {
 const BlogDisplayProjectCard = (props: Props) => {
   const { data, index } = props;
   if (data && !data.roleDisplayData) return null;
+
   return (
     <div className="flex flex-col gap-4 h-full w-full rounded-xl border-solid border-4 border-black overflow-hidden">
       <div
@@ -36,14 +37,14 @@ const BlogDisplayProjectCard = (props: Props) => {
         <div className="blur-sm brightness-[0.6]">
           <Image
             alt="project-photos"
-            src={data?.projectPhoto}
+            src={data?.headerImage}
             width={1080}
             height={1920}
             className="object-cover rounded-xl w-full h-auto hidden md:block max-h-[322px]"
           />
           <Image
             alt="project-photos"
-            src={data?.projectPhoto}
+            src={data?.headerImage}
             width={600}
             height={600}
             className="object-cover rounded-xl w-full h-auto md:hidden min-h-[301px]"

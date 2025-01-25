@@ -16,10 +16,7 @@ export const metadata: Metadata = {
 };
 
 export default async function Page(props: any) {
-  const [content, blogPostArray] = await Promise.all([
-    builder.getAll("project-data", {
-      fields: "data",
-    }),
+  const [content] = await Promise.all([
     builder.getAll("blog-post-data", {
       fields: "data",
     }),
@@ -34,10 +31,7 @@ export default async function Page(props: any) {
           practical code implementation.
         </p>
 
-        <BlogPostProjectDisplay
-          content={content}
-          blogPostArray={blogPostArray}
-        />
+        <BlogPostProjectDisplay blogPostArray={content} />
         <RenderBuilderContent model={"project-data"} content={content} />
       </div>
     </div>
