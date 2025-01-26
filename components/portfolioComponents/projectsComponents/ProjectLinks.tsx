@@ -32,7 +32,7 @@ const ProjectLinks = (props: Props) => {
           src="/github-mark.svg"
           width={100}
           height={100}
-          className="object-contain"
+          className="object-contain hover:opacity-50 transition duration-100 ease-in-out"
         />
       </Link>
       <Link
@@ -45,7 +45,7 @@ const ProjectLinks = (props: Props) => {
           src="/link-solid.svg"
           width={100}
           height={100}
-          className="object-contain"
+          className="object-contain  hover:opacity-50 transition duration-100 ease-in-out"
         />
       </Link>
     </div>
