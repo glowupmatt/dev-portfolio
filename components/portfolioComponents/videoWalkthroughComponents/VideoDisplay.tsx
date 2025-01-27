@@ -25,6 +25,11 @@ const VideoDisplay = (props: Props) => {
             src="https://youtube.com/embed/UMfp6tvcPsI?feature=share"
             allowFullScreen
           ></iframe>
+          <iframe
+            className="rounded-lg w-full h-[30rem]"
+            src="https://youtube.com/embed/sUerGm06kh4?feature=share"
+            allowFullScreen
+          ></iframe>
         </div>
       </div>
     </div>
