@@ -12,7 +12,7 @@ type Props = {
 const ContactInfoButton = (props: Props) => {
   const { setCopySuccess = () => {}, copySuccess, data } = props;
   const textContainer =
-    "relative bg-[white] border-hidden lg:border-solid border h-[4rem] w-full border-black  justify-center flex  items-center rounded-[8rem] lg:text-white transition ease-in-out delay-150 hover:bg-[#58456a] duration-300 xl:h-[9rem] cursor-pointer";
+    "relative bg-[white] border-hidden lg:border-solid border h-[4rem] w-full border-black  justify-center flex  items-center rounded-[8rem] lg:text-white transition ease-in-out delay-150 hover:bg-[#58456a] duration-300 xl:min-h-[6rem] cursor-pointer";
 
   if (data.VARIANT === "EMAIL") {
     const copyLink = () => {
@@ -20,17 +20,14 @@ const ContactInfoButton = (props: Props) => {
       setCopySuccess(true);
     };
     return (
-      <div
-        className={`${textContainer} lg:w-[18rem] xl:w-full`}
-        onClick={copyLink}
-      >
+      <div className={`${textContainer} xl:w-full`} onClick={copyLink}>
         <p className="text-[.8rem] md:text-[1rem] absolute xl:text-[1.5rem] text-black">
-          {copySuccess === false ? data.text : "Copied Email to Clipboard"}
+          {data.text}
         </p>
       </div>
     );
   }
-  if (data.VARIANT === "SOCIAL") {
+  if (data.VARIANT === "SOCIAL" && data.img) {
     return (
       <Link
         target="_blank"
@@ -38,15 +35,21 @@ const ContactInfoButton = (props: Props) => {
         href={data.source}
         className={textContainer}
       >
-        <div className="relative w-[1.5rem] h-[1.5rem] xl:h-[3rem] xl:w-[3rem]">
-          <Image
-            alt="social links"
-            src={data.img}
-            fill
-            className="object-cover"
-            sizes="100vw"
-          />
-        </div>
+        {data.text ? (
+          <p className="text-[.8rem] md:text-[1rem]  xl:text-[1.5rem] text-black">
+            {data.text}
+          </p>
+        ) : (
+          <div className="relative w-[1.5rem] h-[1.5rem] xl:h-[3rem] xl:w-[3rem]">
+            <Image
+              alt="social links"
+              src={data.img}
+              fill
+              className="object-cover"
+              sizes="100vw"
+            />
+          </div>
+        )}
       </Link>
     );
   }
