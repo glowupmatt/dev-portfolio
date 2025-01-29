@@ -6,7 +6,6 @@ import Navigation from "@/components/Navigation";
 import { RenderBuilderContent } from "@/components/builderFiles/RenderBuilderContent";
 import { builder } from "@builder.io/sdk";
 import VideoDisplay from "@/components/portfolioComponents/videoWalkthroughComponents/VideoDisplay";
-import AboutMeComp from "@/components/portfolioComponents/aboutMeComponents/AboutMeComp";
 
 builder.init(process.env.NEXT_PUBLIC_API_KEY as string);
 
@@ -20,7 +19,6 @@ export default async function Home() {
       <div className="flex justify-center items-center overflow-hidden bg-gradient-to-b from-black via-slate-900 to-[#340d4ab5]">
         <div className="flex flex-col gap-[4rem] md:gap-[6rem] lg:gap-2 max-w-[140rem]">
           <Menu />
-          <AboutMeComp />
           <TechStack />
           <VideoDisplay />
           <Projects content={content} />

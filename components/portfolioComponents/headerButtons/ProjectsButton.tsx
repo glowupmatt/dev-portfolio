@@ -15,11 +15,22 @@ const ProjectsButton = (props: Props) => {
     >
       <Link
         href="#projects"
-        className=" bg-gradient-to-r from-purple-400 via-blue-400 to-yellow-400
-background-animate h-[17rem] w-full rounded-[3rem] flex flex-col justify-between items-center p-[2rem] md::max-w-[30rem] lg:max-w-full lg:h-[30rem] transition  lg:ease-in-out lg:hover:scale-[.96] lg:duration-500"
+        className="bg-gradient-to-r from-purple-400 via-blue-400 to-yellow-400 background-animate h-[17rem] w-full rounded-[3rem] flex flex-col justify-between items-center p-[2rem] md::max-w-[30rem] lg:max-w-full lg:h-[30rem] transition  lg:ease-in-out lg:hover:scale-[.96] lg:duration-500"
       >
-        <p className="md:text-[2rem] md:text-start smd:text-[1.5rem] xl:text-[3rem]">
-          Hello! I am Matthew Nicholson and I craft stunning web experiences.
+        <div className="hidden md:block w-full">
+          <p className="text-start text-[1.5rem] font-bold animate-bounce">
+            About Me
+          </p>
+        </div>
+
+        <p className="text-[.7rem] md:text-[1rem] md:text-start smd:text-[.8rem] xl:text-[1.3rem]">
+          With a background in marketing, I developed a passion for design and
+          code while creating digital experiences. Now, as a Full-Stack
+          Developer, I channel that creativity into building scalable web
+          applications with TypeScript and React, specializing in CMS tools like
+          Contentful. I&apos;ve had the opportunity to work with backend
+          languages such as PostgreSQL and MongoDB to streamline workflows and
+          enhance user experiences.
         </p>
         <div className="flex justify-between w-full items-center">
           <motion.div
