@@ -1,12 +1,11 @@
 "use client";
 import React, { useState, useRef } from "react";
 import ContactInfoButton from "./ContactInfoButton";
-import BlogButton from "./BlogButton";
 
 export type contactInfoType = {
   text?: string;
   source: string;
-  img: string;
+  img?: string;
   VARIANT: "EMAIL" | "SOCIAL";
 };
 
@@ -41,8 +40,14 @@ const ContactInfo = () => {
       VARIANT: "SOCIAL",
     },
     {
-      source: "https://www.instagram.com/glowupmatt/?hl=en",
-      img: "/instagram.svg",
+      source: "/Matthew_Nicholson_Resume.pdf",
+      img: "/pdf-file-svgrepo-com.svg",
+      text: "View Resume",
+      VARIANT: "SOCIAL",
+    },
+    {
+      source: "/the-journey/",
+      img: "/blog_3959425.png",
       VARIANT: "SOCIAL",
     },
   ];
@@ -64,7 +69,7 @@ const ContactInfo = () => {
             </h3>
           </div>
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="grid grid-cols-3 auto-rows-auto w-full lg:grid-rows-2 justify-items-start gap-[1rem] md:w-[70%]  lg:w-full lg:h-[14rem] xl:h-[20rem] items-center max-w-[30rem]">
+            <div className="grid grid-cols-3 grid-rows-2 w-full lg:grid-rows-2 justify-items-start gap-[1rem] md:w-[70%]  lg:w-full lg:h-full items-center max-w-[30rem]">
               <div className="flex flex-col col-span-3 w-full gap-4">
                 {infoHasTestKey.map((data, index) => {
                   return (
@@ -82,12 +87,6 @@ const ContactInfo = () => {
                 return <ContactInfoButton data={data} key={index} />;
               })}
             </div>
-            <BlogButton
-              textRef={textRef}
-              isHovered={isHovered}
-              handleMouseEnter={handleMouseEnter}
-              handleMouseLeave={handleMouseLeave}
-            />
           </div>
         </div>
       </section>
