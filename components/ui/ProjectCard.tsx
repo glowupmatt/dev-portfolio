@@ -26,6 +26,11 @@ type Props = {
 const ProjectCard = (props: Props) => {
   const { data, index } = props;
   const isEven = index % 2 === 0;
+  const hrefForBlog = data?.blogUrl
+    ? data.blogUrl.includes("http")
+      ? data.blogUrl
+      : `/project-breakdowns/${data.blogUrl}`
+    : null;
   return (
     <Card
       className={classNames(
@@ -74,7 +79,7 @@ const ProjectCard = (props: Props) => {
         </div>
         {data?.blogUrl && (
           <Link
-            href={`/project-breakdowns/${data?.blogUrl}`}
+            href={hrefForBlog}
             target="_blank"
             className="bg-[#b098c7] rounded-l-full h-[4rem] p-[1rem] w-[50%] text-[.5rem] items-center justify-center flex hover:bg-[#58456a] transition duration-300 ease-in-out hover:text-white cursor-pointer"
           >
