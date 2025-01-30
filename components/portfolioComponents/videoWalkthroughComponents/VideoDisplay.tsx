@@ -30,6 +30,13 @@ const VideoDisplay = (props: Props) => {
             src="https://youtube.com/embed/sUerGm06kh4?feature=share"
             allowFullScreen
           ></iframe>
+          <iframe
+            className="rounded-lg w-full h-[30rem]"
+            src="https://www.youtube.com/embed/7r387Jbqej4?si=jbw2Q86Gy6tGL2L2"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          ></iframe>
         </div>
       </div>
     </div>
