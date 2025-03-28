@@ -30,7 +30,6 @@ export default async function Page(props: any) {
           Explore my projects as I explain the transition from design to
           practical code implementation.
         </p>
-
         <BlogPostProjectDisplay blogPostArray={content} />
         <RenderBuilderContent model={"project-data"} content={content} />
       </div>
