@@ -32,7 +32,7 @@ const TextDisplay = (props: Props) => {
         <p className="text-[.9rem] font-semibold md:text-[1.3rem]">
           Challenge:{" "}
         </p>
-        <p className="text-white text-[.8rem] md:text-[1.2rem] md:max-w-[25rem]">
+        <p className="text-white text-[.8rem] md:text-[.8rem] md:max-w-[25rem]">
           {data?.roleDisplayData[0].content}
         </p>
       </div>
