@@ -33,7 +33,7 @@ const TechUsedList = (props: Props) => {
             >
               {data.title}
             </p>
-            <div className="w-[2rem] h-[2rem]">
+            <div className="place-content-center w-[2rem] h-[2rem]">
               <Image
                 src={data.image}
                 alt={data.title}
