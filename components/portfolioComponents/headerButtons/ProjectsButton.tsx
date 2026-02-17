@@ -23,15 +23,13 @@ const ProjectsButton = (props: Props) => {
           </p>
         </div>
 
-        {/* <p className="text-[.7rem] md:text-[1rem] md:text-start smd:text-[.8rem] xl:text-[1.3rem]">
-          With a background in marketing, I developed a passion for design and
-          code while creating digital experiences. Now, as a Full-Stack
-          Developer, I channel that creativity into building scalable web
-          applications with TypeScript and React, specializing in CMS tools like
-          Contentful. I&apos;ve had the opportunity to work with backend
-          languages such as PostgreSQL and MongoDB to streamline workflows and
-          enhance user experiences.
-        </p> */}
+        <p className="text-[.7rem] md:text-[1rem] md:text-start smd:text-[.8rem] xl:text-[1.3rem]">
+            With a background in creative direction, I discovered my passion for 
+            solving technical problems while helping users navigate complex systems. 
+            Now as a Full-Stack Developer, I combine development and technical support—
+            building with TypeScript, React, and Node.js while troubleshooting API 
+            integrations and supporting cross-functional teams.
+        </p>
         <div className="flex justify-between w-full items-center">
           <motion.div
             animate={{ rotate: [50, 0, 50] }}
