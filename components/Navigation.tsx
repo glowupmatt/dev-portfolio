@@ -8,6 +8,13 @@ import { FaBars, FaTimes } from "react-icons/fa";
 
 type Props = {};
 
+type NavigationOption = {
+  path: string;
+  text: string;
+  id: string;
+  external?: boolean;
+};
+
 const Navigation = (props: Props) => {
   const pathName = usePathname();
   const [showMenu, setShowMenu] = useState(false);
@@ -19,7 +26,7 @@ const Navigation = (props: Props) => {
     setShowMenu(false);
   };
   const currentPath = pathName.split("/")[1];
-  const navigationOptions = [
+  const navigationOptions: NavigationOption[] = [
     {
       path: "",
       text: "Portfolio",
@@ -31,9 +38,10 @@ const Navigation = (props: Props) => {
       id: "project-breakdowns",
     },
     {
-      path: "the-journey",
+      path: "https://thedrafts.dev/",
       text: "Blog",
       id: "the-journey",
+      external: true,
     },
   ];
   return (
@@ -70,7 +78,17 @@ const Navigation = (props: Props) => {
                 },
               )}
             >
-              <Link href={`/${option.path}`}>{option.text}</Link>
+              {option.external ? (
+                <a
+                  href={option.path}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {option.text}
+                </a>
+              ) : (
+                <Link href={`/${option.path}`}>{option.text}</Link>
+              )}
             </li>
           ))}
         </ul>
@@ -102,7 +120,17 @@ const Navigation = (props: Props) => {
                 },
               )}
             >
-              <Link href={`/${option.path}`}>{option.text}</Link>
+              {option.external ? (
+                <a
+                  href={option.path}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {option.text}
+                </a>
+              ) : (
+                <Link href={`/${option.path}`}>{option.text}</Link>
+              )}
             </li>
           ))}
         </ul>
